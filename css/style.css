@@ -1,0 +1,419 @@
+@charset "UTF-8";
+
+/* font import */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+@font-face {
+font-family: "Canela-Regular";
+src: url("./font/4a24899e94d8236f671c1090cd9e068c.eot"); /* IE9*/
+src: url("./font/4a24899e94d8236f671c1090cd9e068c.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+url("./font/4a24899e94d8236f671c1090cd9e068c.woff2") format("woff2"), /* chrome、firefox */
+url("./font/4a24899e94d8236f671c1090cd9e068c.woff") format("woff"), /* chrome、firefox */
+url("./font/4a24899e94d8236f671c1090cd9e068c.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+url("./font/4a24899e94d8236f671c1090cd9e068c.svg#Canela-Regular") format("svg"); /* iOS 4.1- */
+}
+@font-face {
+    font-family: Shaly; 
+    src: url('./font/Shaly_Regular.eot'); 
+    src: local(※), url('./font/Shaly_Regular.woff') format('woff') 
+}
+@font-face {
+    font-family: HoonTop; 
+    src: url('./font/HoonTop_Bold_italic.eot'); 
+    src: local(※), url('./font/HoonTop_Bold_italic.woff') format('woff') 
+}
+
+.shaly {
+    font-family:"Shaly" !important;
+    font-style:normal;
+    /* -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale; */
+}
+.hoonTop {
+    font-family:"HoonTop" !important;
+    font-style:normal;
+    /* -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale; */
+}
+.canela {
+    font-family:"Canela-Regular" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* setting */
+* {box-sizing: border-box;}
+body {padding: 0; margin: 0; font-family: 'Noto Sans', sans-serif; overflow-x: hidden; font-size: 14px;} 
+/*  background: #f8f9f4; */
+button {outline: none;}
+h1, h2, h3, h4, h5, h6, p, ul {margin: 0; padding: 0;}
+ul {list-style: none;}
+a {text-decoration: none;}
+button {cursor: pointer;}
+img {display: block;}
+p {margin: 0; padding: 0;}
+.han {font-family: 'Noto Sans KR', sans-serif; letter-spacing: -1px;}
+
+/* header */
+#header {
+    position: relative;
+    overflow: hidden;
+}
+#mediaHeader {
+    display: none;
+}
+
+/* header - shadow */
+#shadow {
+    width: 100%;
+    position: absolute;
+}
+
+/* header - Img */
+#imgBox {
+    width: 300%;
+    display: flex;
+}
+
+/* header - menu & logo */
+#topBox {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    padding-top: 30px;
+}
+.menuScroll {
+    background: #788841;
+    padding: 10px !important;
+}
+#navi {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    padding-left: 25px;
+    cursor: pointer;
+}
+.logo p {
+    color: #fff;
+    font-size: 1.83rem;
+} 
+#mSideBt {
+    display: none;
+}
+
+.naviBox {
+    display: flex;
+    align-items: center;
+}
+.menu {
+    padding-right: 50px;
+}
+.menu a {
+    color: #fff;
+    font-size: .9rem;
+}
+.menu:nth-child(5) {
+    padding-right: 85px;
+}
+.menu:last-child {
+    padding-right: 25px;
+}
+.menu:last-child a {
+    color: #212529;
+}
+.loginIcon {
+    font-size: 1rem;
+    color: #445b17;
+}
+
+#sideMenu {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    display: none;
+}
+
+/* header - title, cont, side (number, line) */
+#headerBox {
+    width: 100%;
+    height: 100%;
+    max-width: 1280px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#headerTitle {
+    position: absolute;
+    top: 50%;
+    right: 180px;
+    transform: translateY(-50%);
+}
+.changeTitle, .changeTitle2 {
+    font-size: 5.5rem;
+    color: #fbfdf1;
+    font-weight: 300;
+}
+.changeTitle2 {
+    margin-top: -25px;
+    color: #fff;
+}
+.changeCont {
+    color: #f8f9f4;
+    font-size: .9rem;
+    cursor: pointer;
+}
+.cont {
+    margin-top: 20px;
+    color: #f8f9f4;
+    cursor: pointer;
+    /* background: rgba(120, 136, 65, 0.73); */
+    background: rgba(68, 91, 23, 0.6);
+    padding: 14px 25px;
+    border: none;
+    font-size: .83rem;
+}
+
+#menuLine {
+    width: 18px;
+    height: 1px;
+    background: #c5c5c5;
+    position: absolute;
+    right: 25px;
+    top: 85px;
+    z-index: 10;
+}
+#number {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding-left: 20px;
+}
+#pageNum li {
+    padding-bottom: 30px;
+    text-align: right;
+    font-weight: 600;
+    color: #a8a8a4;
+    padding-right: 20px;
+    font-size: 18px;
+}
+#pageNum li:last-child {
+    padding-bottom: 0;
+}
+
+.numOn {
+    font-size: 22px !important;
+    color: #445b17 !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0 !important;
+}
+.lineOn {
+    width: 2px;
+    height: 40px;
+    background: #788841;
+    margin-left: 20px;
+}
+#side {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-left: 1px solid #dcdcde;
+}
+
+
+/* footer */
+#foot {
+    width: 100%;
+    background: #788841;
+}
+#foot p {
+    letter-spacing: 0 !important;
+}
+#footBox {
+    width: 100%;
+    padding: 25px 20px 15px;
+}
+#footTop {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+#footTop p {
+    font-family: 'Francois One', sans-serif;
+    font-size: 30px;
+}
+#footTop ul {
+    display: flex;
+    justify-content: flex-end;
+    font-size: .8rem;
+}
+#footTop li {
+    letter-spacing: 0 !important;
+    cursor: pointer;
+    color: #e2ecbd;
+}
+#footMidle {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+#footMidle img {
+    width: 100px;
+}
+#copy {
+    margin-top: 10px;
+}
+#copy p {
+    padding-bottom: 2px;
+    font-size: .7rem;
+    color: #d2dcb0;
+    font-weight: 100;
+}
+#endLogo p {
+    color: #fff;
+    font-size: 2.2rem;
+    color: #e2ecbd;
+}
+#mediaCopy {
+    display: none;
+}
+#googleMap {
+    width: 100%;
+    height: 450px;
+    display: block;
+}
+
+#footEnd {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.copyRight {
+    font-size: .7rem;
+    color: #d2dcb0;
+}
+#soical {
+    display: flex;
+    align-items: flex-end;
+}
+#soical p {
+    padding: 0 5px;
+    font-size: 1.5rem;
+    color: #e2ecbd;
+    cursor: pointer;
+}
+
+
+
+
+
+
+#sideBt {
+    height: 70px;
+    background: #445b17;
+    position: fixed;
+    bottom: 120px;
+    right: -100px;
+    color: #fff;
+    font-size: .83rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20;
+}
+.openBt {
+    transform: rotate(-90deg); 
+   
+}
+#sideBox {
+    width: 100px;
+    text-align: center;
+}
+#sideBox p {
+    font-size: .7rem;
+}
+#sideIcon {
+    font-size: 1.88rem !important;
+}
+
+#topBt {
+    height: 40px;
+    background: #788841;
+    position: absolute;
+    bottom: 80px;
+    color: #f8f9f4;
+    font-size: .83rem;
+    display: none;
+    align-items: center;
+    cursor: pointer;
+    z-index: 20;
+    padding: 5px;
+    width: 100%;
+    top: 100%;
+}
+
+#loginModal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .5);
+    z-index: 30;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#loginBox {
+    width: 600px;
+    height: 400px;
+    background: #f8f9f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#lTitle {
+    width: 40%;
+    height: 100%;
+    background: red;
+}
+
+#lCont {
+    width: 60%;
+    height: 100%;
+    background: blue;
+}
+
