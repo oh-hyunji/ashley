@@ -259,7 +259,7 @@ p {margin: 0; padding: 0;}
 }
 #footBox {
     width: 100%;
-    padding: 25px 20px 15px;
+    padding: 25px 20px 18px;
 }
 #footTop {
     display: flex;
@@ -298,9 +298,12 @@ p {margin: 0; padding: 0;}
     color: #d2dcb0;
     font-weight: 100;
 }
+#endLogo {
+    margin-top: -8px;
+}
 #endLogo p {
     color: #fff;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: #e2ecbd;
 }
 #mediaCopy {
@@ -322,11 +325,12 @@ p {margin: 0; padding: 0;}
     font-size: .7rem;
     color: #d2dcb0;
 }
-#soical {
+#social {
     display: flex;
     align-items: flex-end;
+    margin-top: -8px;
 }
-#soical p {
+#social p {
     padding: 0 5px;
     font-size: 1.5rem;
     color: #e2ecbd;
