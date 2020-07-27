@@ -183,11 +183,11 @@
     background: #fff;
 }
 #aBox {
-    padding: 95px 0 70px;
+    padding: 100px 0 85px;
 }
 #aTextBox {
     width: 50%;
-    padding-left: 40px;
+    padding-left: 100px;
 }
 .aTitle, .aTitle2 {
     opacity: 1;
@@ -231,7 +231,6 @@
 #bSec {
     width: 100%;
     background: #fff;
-    padding-bottom: 200px;
 }
 .bBox {
     /* padding: 90px 0; */
@@ -248,7 +247,7 @@
     left: 0;
 }
 .bTitle p {
-    width: 97%;
+    width: 94%;
     text-align: end;
     font-size: .9rem;
     color: #788841;
@@ -272,13 +271,13 @@
     margin-top: 40px;
 }
 .menuBox p, .bBox:last-child .menuBox p {
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 1.3rem;
+    color: #788841;
     text-align: center;
 }
 .bPrice {
-    font-size: 1rem !important;
-    color: #8c8c8c !important;
+    font-size: .9rem !important;
+    color: #c5c5c5 !important;
     font-weight: 600;
     margin-top: -2px;
 }
@@ -331,4 +330,45 @@
 }
 .wSize {
     width: 40%;
+}
+
+/* section C */
+#cSec {
+    width: 100%;
+    background: #fff;
+}
+#cBox {
+    padding: 80px 0 90px;
+}
+#cTextBox {
+    width: 50%;
+    padding-left: 40px;
+}
+.cTitle, .cTitle2 {
+    opacity: 1;
+    letter-spacing: 3.2px;
+    color: #222222;
+    font-size: 5.23rem;
+}
+.cTitle2 {
+    margin-top: -25px;
+}
+.cPrice {
+    display: block;
+    color: #424242;
+    font-size: 1.03rem;
+    font-weight: 600;
+}
+.cText {
+    display: block;
+    padding-top: 6px;
+    color: #929292;
+    font-size: .96rem;
+}
+#cImgBox {
+    width: 50%;
+    overflow: hidden;
+}
+#cImgBox img {
+    width: 100%;
 }
