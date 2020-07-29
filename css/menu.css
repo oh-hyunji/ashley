@@ -183,7 +183,7 @@
     background: #fff;
 }
 #aBox {
-    padding: 90px 0;
+    padding: 90px 0 80px;
 }
 #aTextBox {
     width: 50%;
@@ -335,7 +335,7 @@
     background: #fff;
 }
 #cBox {
-    padding: 90px 0;
+    padding: 100px 0 85px;
 }
 #cTextBox {
     width: 50%;
@@ -377,24 +377,28 @@
     background: #fff;
 }
 #dBox {
-    padding: 0 0 155px;
+    padding-bottom: 125px;
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 .dTitleBox {
-    width: 25%;
+    /* width: 25%; */
+    width: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    border-top-right-radius: 35%;
+    /* border-top-right-radius: 35%;
     border-bottom-right-radius: 35%;
-    background: #788841;
+    background: #788841; */
 }
 .dTitleBox h1 {
-    font-size: 2.8rem;
-    color: #f8f9f4;
+    /* font-size: 2.8rem;
+    color: #f8f9f4; */
+    
+    font-size: 3.2rem;
+    color: #333;
     text-align: center;
 }
 .dLine {
@@ -402,14 +406,19 @@
     margin: 12px 0 16px;
 }
 .slideL {
-    width: 70px;
+    /* width: 70px;
     height: 4px;
-    background: #d2dcb0;
+    background: #d2dcb0; */
+
+    width: 80px;
+    height: 4px;
+    background: #e5e6e0;
     transition: .3s;
     margin-right: 2px;
 }
 .slOn {
-    background: #fbfdf1;
+    /* background: #fbfdf1; */
+    background: #788841;
 }
 .dImgBox {
     width: 70%;
@@ -478,15 +487,17 @@
     height: 550px;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
 .eTitle h1 {
-    font-size: 6rem;
+    font-size: 5.23rem;
     color: #f8f9f4;
 }
 .eTitle p {
     text-align: center;
     color: rgb(255 255 255 / .5);
-    font-size: 1.9rem;
+    font-size: 1.63rem;
     font-weight: 600;
     margin-top: -18px;
 }
@@ -509,8 +520,7 @@
     background: #fff;
 }
 #fBox {
-    padding: 0 0 90px;
+    padding: 90px 0;
     display: flex;
     width: 100%;
-    height: 500px;
 }
