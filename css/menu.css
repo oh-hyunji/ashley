@@ -8,6 +8,7 @@
     width: 100%;
     height: 630px;
     overflow: hidden;
+    background: #fff;
 }
 .menu {
     width: 100px;
@@ -76,7 +77,6 @@
     color: #fbfdf1;
     font-size: 1.3rem;
     font-weight: normal;
-    letter-spacing: -0.5px;
 }
 .priceInfo h2 span {
     font-size: 1.2rem;
@@ -183,7 +183,7 @@
     background: #fff;
 }
 #aBox {
-    padding: 100px 0 85px;
+    padding: 90px 0;
 }
 #aTextBox {
     width: 50%;
@@ -216,7 +216,6 @@
 }
 #aImgBox img {
     width: 100%;
-    transform: rotate(-10deg);
 }
 /* .imgRotate {
     animation : rotateIn 3s forwards;
@@ -240,21 +239,19 @@
 }
 .bTitle {
     position: absolute;
-    width: 80%;
     display: flex;
     align-items: center;
     bottom: 102%;
-    left: 0;
+    left: 15px;
 }
 .bTitle p {
-    width: 95%;
     text-align: end;
     font-size: .9rem;
     color: #788841;
     font-weight: 600;
 }
 .menuBox {
-    width: 30%;
+    width: 29%;
     height: 250px;
     background: #445b17;
     display: flex;
@@ -263,9 +260,9 @@
 .bName {
     position: absolute;
     top: 100%;
-    left: 55%;
+    left: 52%;
     margin-top: 50px;
-    transform: translateX(-55%);
+    transform: translateX(-52%);
 }
 .bBox:first-child .bName {
     margin-top: 40px;
@@ -296,7 +293,7 @@
 }
 
 .bMenu img {
-    width: 380px;
+    width: 365px;
     position: absolute;
     top: 0;
     left: 0;
@@ -338,7 +335,7 @@
     background: #fff;
 }
 #cBox {
-    padding: 80px 0 90px;
+    padding: 90px 0;
 }
 #cTextBox {
     width: 50%;
@@ -371,4 +368,149 @@
 }
 #cImgBox img {
     width: 100%;
+}
+
+
+/* section D */
+#dSec {
+    width: 100%;
+    background: #fff;
+}
+#dBox {
+    padding: 0 0 155px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.dTitleBox {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-top-right-radius: 35%;
+    border-bottom-right-radius: 35%;
+    background: #788841;
+}
+.dTitleBox h1 {
+    font-size: 2.8rem;
+    color: #f8f9f4;
+    text-align: center;
+}
+.dLine {
+    display: flex;
+    margin: 12px 0 16px;
+}
+.slideL {
+    width: 70px;
+    height: 4px;
+    background: #d2dcb0;
+    transition: .3s;
+    margin-right: 2px;
+}
+.slOn {
+    background: #fbfdf1;
+}
+.dImgBox {
+    width: 70%;
+    overflow: hidden;
+}
+.dSlide {
+    display: flex;
+    width: 1300px;
+    justify-content: center;
+    align-items: center;
+}
+.dImgInfo {
+    width: 325px;
+}
+.bNum {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #445b17;
+}
+.dImgInfo img {
+    width: 85%;
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+}
+.dImgOn {
+    -webkit-filter: unset !important;
+    filter: unset !important;
+}
+.dTextBox {
+    padding: 8px 20px;
+}
+
+.dTextBox p:first-child {
+    font-size: 1.55rem;
+    font-weight: 600;
+    color: #e5e6e0;
+    letter-spacing: -0.5px;
+}
+.dPrice {
+    font-size: .96rem;
+    font-weight: 600;
+    color: #e5e6e0;
+    padding: 2px 0;
+}
+.dTextBox p:last-child {
+    font-size: .8rem;
+    color: #e5e6e0;
+}
+.fontOn p:first-child{
+    color: #788841;
+}
+.fontOn .dPrice {
+    color: #636363;
+}
+.fontOn p:last-child {
+    color: #929292;
+}
+
+/* section E */
+#eSec {
+    width: 100%;
+}
+#eBox {
+    display: flex;
+    width: 100%;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+.eTitle h1 {
+    font-size: 6rem;
+    color: #f8f9f4;
+}
+.eTitle p {
+    text-align: center;
+    color: rgb(255 255 255 / .5);
+    font-size: 1.9rem;
+    font-weight: 600;
+    margin-top: -18px;
+}
+#backVideo {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#backVideo .movie {
+    width: 100%;
+    display: block;
+}
+
+
+/* section E */
+#fSec {
+    width: 100%;
+    background: #fff;
+}
+#fBox {
+    padding: 0 0 90px;
+    display: flex;
+    width: 100%;
+    height: 500px;
 }
