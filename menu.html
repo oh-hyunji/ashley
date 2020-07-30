@@ -40,17 +40,32 @@
         <div id="infoBox">
            <div class="infoTitle">
                <div class="infoText">
-                   <div class="priceInfo">
-                       <h2><i class="far fa-check-circle checkIcon"></i>&nbsp;&nbsp;Ashley Classic ?</span></h2>
-                       <p class="han">애슐리의 고전적 가치를 지닌 Classic, 여성감각의 포근하고 화사한 인테리어와<br>에피타이저 부터 디저트 까지 60여종의 샐러드바를 합리적인 가격에 즐겨요!</p>
-                   </div>
+                   
                     <div class="priceInfo">
-                        <h2><i class="far fa-check-circle checkIcon"></i>&nbsp;&nbsp;Salad Bar</h2>
-                        <p>WeekDay <span class="han">(평일)</span> &#8361;9,900 | Weekend <span class="han">(주말,공휴일)</span> &#8361;13,900</p>
+                        <h2 class="han">샐러드바 평일</h2>
+                        <p class="hoonTop saladPrice">&#8361;9,900</p>
+                        <!-- <div class="priceBox">
+                            <p class="han">주말, 공휴일</p>
+                            <p class="saladPrice">&#8361;13,900</p>
+                        </div>
+                        <div class="priceBox">
+                            <p class="han">아동</p>
+                            <p class="saladPrice">&#8361;4,900</p>
+                        </div>
+                        <div class="priceBox">
+                            <p class="han">초등학생</p>
+                            <p class="saladPrice">&#8361;8,200</p>
+                        </div> -->
                     </div>
-                    <div class="priceInfo">
-                        <h2><i class="far fa-check-circle checkIcon"></i>&nbsp;&nbsp;Kids Salad Bar</h2>
-                        <p>Children <span>(초등학생)</span> &#8361;8,200 | Preschool Children <span>(아동)</span> &#8361;13,900</p>
+                    <div class="priceInfo change">
+                        <div class="lineStyle"></div>
+                        <h2 class="han">주말, 공휴일</h2>
+                        <p class="hoonTop saladPrice">&#8361;13,900</p>
+                    </div>
+                    <div class="priceInfo change infoLine">
+                        <h2>Ashley Classic</span></h2>
+                        <p class="han">애슐리의 고전적 가치를 지닌 Classic 여성감각의 포근하고 화사한 인테리어와<br>에피타이저 부터 디저트 까지 60여종의 샐러드바를 합리적인 가격에 즐겨요!</p>
+                        <p class="han">※ 애슐리 키즈 샐러드바 가격 아동 : &#8361;4,900 | 초등학생 : &#8361;8,200</p>
                     </div>
               </div>
            </div>
@@ -173,8 +188,9 @@
     <section id="dSec">
         <div id="dBox">
             <div class="dTitleBox">
-                <div>
-                    <h1 class="hoonTop">Classic Dessert</h1>
+                <div class="dTitle">
+                    <h1 class="hoonTop">Classic</h1>
+                    <h1 class="hoonTop">Dessert</h1>
                     <div class="dLine">
                         <div class="slideL slOn"></div>
                         <div class="slideL"></div>
@@ -194,12 +210,12 @@
                         </div>
                     </div>
                     <div class="dImgInfo">
+                        <img src="./images/menu/maca1.png" alt="이미지">
                         <div class="dTextBox">
                             <p>02. Color Macaron</p>
                             <p class="dPrice"><span class="han">컬러 마카롱</span>&nbsp;&nbsp;&nbsp;&#8361;3,000 (1piece)</p>
                             <p class="han">신선한 과일들을 첨가하여 달콤 새콤하고 쫀득하며 부드러운 4가지 종류의 컬러 마카롱 입니다. ( 테이크 아웃 가능 )</p>
                         </div>
-                        <img src="./images/menu/maca1.png" alt="이미지">
                     </div>
                    
                     <div class="dImgInfo">
@@ -211,12 +227,12 @@
                         </div>
                     </div>
                     <div class="dImgInfo">
+                        <img src="./images/menu/yog.png" alt="이미지">
                         <div class="dTextBox">
                             <p>04. Plain Yogurt</p>
                             <p class="dPrice"><span class="han">플레인 요거트</span>&nbsp;&nbsp;&nbsp;Salad Bar</p>
                             <p class="han">우유와 유산균을 사용하여 담백하고 상큼한 맛이 일품인 플레인 요거트 입니다. 토핑과 곁들여 함께 즐기세요.</p>
                         </div>
-                        <img src="./images/menu/yog.png" alt="이미지">
                     </div>
                 </div>
             </div>
@@ -226,7 +242,7 @@
         <div id="eBox">
             <div class="eTitle">
                 <h1 class="hoonTop">Classic Drink</h1>
-                <p>wine&nbsp;&nbsp;&&nbsp;&nbsp;coffee&nbsp;&nbsp;&&nbsp;&nbsp;etc</p>
+                <!-- <p>wine&nbsp;&nbsp;&&nbsp;&nbsp;coffee&nbsp;&nbsp;&&nbsp;&nbsp;etc</p> -->
             </div>
         </div>
     </section>
@@ -236,20 +252,207 @@
             <source src="./images/menu/wine2.mp4" type="video/mp4"> 
          </video>
     </div>
+
+
     <section id="fSec">
-        <div id="fBox" class="allBox">
+        <div id="fBigBox" class="allBox">
+            <div class="fBox">
+                <p class="hoonTop">ITALIAN PREMIUM WINE</p>
+                <p><span class="han">※ 무제한 즐기는 이태리 프리미엄 와인 4종 입니다. 1인 </span>&#8361;3,000</p>
+            </div>
+            <div class="evtBox">
+                <div class="fTitle">
+                    <p class="fNum">01</p>
+                </div>
+                <div class="fStar fOne">
+                    <div class="starInfo">
+                        <p class="han">당도</p>
+                        <div class="starLine">
+                            <div class="starColor cp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">산도</p>
+                        <div class="starLine">
+                            <div class="starColor sp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">탄닌</p>
+                        <div class="starLine">
+                            <div class="starColor tp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">바디</p>
+                        <div class="starLine">
+                            <div class="starColor bp"></div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="fText">
+                    <p>Melot Carber</p>
+                    <p><span class="han">멜롯 까베르</span> (alc 13.5%) Italy Dry <span class="wineRcolor">Red</span> Wine</p>
+                    <p class="han fInfo">짙은 가넷 빛깔에 혀를 감싸는 부드러운 탄닌이 느껴지는 블랙 커런트 아로마와 불은 과일 맛이<br>잘 어우러진 드라이 레드 와인으로 소고기 스테이크, 떡갈비, 치킨, 피자, 파스타와 잘 어울립니다.</p>
+                </div>
+            </div>
+            
+
+            <div class="evtBox">
+                <div class="fTitle">
+                    <p class="fNum">02</p>
+                </div>
+                <div class="fStar fTwo">
+                    <div class="starInfo">
+                        <p class="han">당도</p>
+                        <div class="starLine">
+                            <div class="starColor cp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">산도</p>
+                        <div class="starLine">
+                            <div class="starColor sp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">탄닌</p>
+                        <div class="starLine">
+                            <div class="starColor tp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">바디</p>
+                        <div class="starLine">
+                            <div class="starColor bp"></div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="fText">
+                    <p>Prosecco</p>
+                    <p><span class="han">프로세코</span> (alc 11%) Italy Dry <span class="wineGcolor">White</span> Wine</p>
+                    <p class="han fInfo">옅은 연초록 빛깔 속에 잔잔한 기포가 녹아 오렌지, 레몬의 시트러스 아로마를 느낄 수 있는<br>화이트 와인으로 해산물 샐러드, 흰살 생선, 닭 가슴살과 잘 어울립니다.</p>
+                </div>
+            </div>
+            
+            <div class="evtBox">
+                <div class="fTitle">
+                    <p class="fNum">03</p>
+                </div>
+                <div class="fStar fThr">
+                    <div class="starInfo">
+                        <p class="han">당도</p>
+                        <div class="starLine">
+                            <div class="starColor cp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">산도</p>
+                        <div class="starLine">
+                            <div class="starColor sp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">탄닌</p>
+                        <div class="starLine">
+                            <div class="starColor tp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">바디</p>
+                        <div class="starLine">
+                            <div class="starColor bp"></div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="fText">
+                    <p>Brachetto</p>
+                    <p><span class="han">브라케토</span> (alc 7%) Italy Sweet <span class="wineRcolor">Red</span> Wine</p>
+                    <p class="han fInfo">밝은 루비 빛깔에 기분 좋은 기포가 녹아 있는 달콤한 체리 향과 잘 익은 자두 맛을 느낄 수 있는<br>약 발포성 스위트 레드 와인으로 가벼운 육류 요리나 피자, 소시지 요리와 잘 어울립니다.</p>
+                </div>
+            </div>
+            <div class="evtBox">
+                <div class="fTitle">
+                    <p class="fNum">04</p>
+                </div>
+                <div class="fStar fFou">
+                    <div class="starInfo">
+                        <p class="han">당도</p>
+                        <div class="starLine">
+                            <div class="starColor cp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">산도</p>
+                        <div class="starLine">
+                            <div class="starColor sp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">탄닌</p>
+                        <div class="starLine">
+                            <div class="starColor tp"></div>
+                        </div>
+                    </div>
+                    <div class="starInfo">
+                        <p class="han">바디</p>
+                        <div class="starLine">
+                            <div class="starColor bp"></div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="fText">
+                    <p>Moscato</p>
+                    <p><span class="han">모스카토</span> (alc 7%) Italy Sweet <span class="wineGcolor">White</span> Wine</p>
+                    <p class="han fInfo">옅은 황금 빛깔 속에 상쾌한 기포가 녹아 향긋한 사과와 달콤한 살구 아로마를 느낄 수 있는<br>약 발포성 스위트 화이트 와인으로 가벼운 샐러드나 파스타, 치즈케익과 잘 어울립니다.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
 
-
-
-
-
-
-
-
-
+    <section id="gSec">
+        <div id="gBigBox" class="allBox">
+            <div class="gBox">
+                <p class="hoonTop">FRUITS ADE</p>
+                <p class="han">애슐리에서 제공하는 과일 에이드</p>
+            </div>
+            <div class="evtGbox">
+                <div class="gTitle">
+                    <p class="gNum">01</p>
+                    <p><img src="./images/menu/ade1.png" alt="이미지"></p>
+                </div>
+                <div class="gText">
+                    <p>Lime</p>
+                    <p class="gInfo"><span class="han">에이드 피쳐</span> 1500cc &#8361;6,900</p>
+                    <p class="gInfo"><span class="han">에이드 1잔</span> 330cc &#8361;3,500</p>
+                </div>
+            </div>
+            <div class="evtGbox">
+                <div class="gTitle">
+                    <p class="gNum">02</p>
+                    <p><img src="./images/menu/ade2.png" alt="이미지"></p>
+                </div>
+                <div class="gText">
+                    <p>Orange</p>
+                    <p class="gInfo"><span class="han">에이드 피쳐</span> 1500cc &#8361;6,900</p>
+                    <p class="gInfo"><span class="han">에이드 1잔</span> 330cc &#8361;3,500</p>
+                </div>
+            </div>
+            <div class="evtGbox">
+                <div class="gTitle">
+                    <p class="gNum">03</p>
+                    <p><img src="./images/menu/ade3.png" alt="이미지"></p>
+                </div>
+                <div class="gText">
+                    <p>Passion Fruit</p>
+                    <p class="gInfo"><span class="han">에이드 피쳐</span> 1500cc &#8361;6,900</p>
+                    <p class="gInfo"><span class="han">에이드 1잔</span> 330cc &#8361;3,500</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 

@@ -71,19 +71,50 @@
     padding: 0 50px;
 }
 .priceInfo {
-    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+}
+.change {
+    justify-content: start;
+}
+.lineStyle {
+    position: absolute;
+    width: 1px;
+    height: 150px;
+    background: #e2ecbd;
+    top: 0;
+    right: 100px;
 }
 .priceInfo h2 {
     color: #fbfdf1;
-    font-size: 1.3rem;
-    font-weight: normal;
-}
-.priceInfo h2 span {
     font-size: 1.2rem;
+    font-weight: 500;
+    width: 100%;
+    text-align: end;
+}
+.change h2 {
+    text-align: start;
+}
+.infoLine {
+    border-top: 1px solid #e2ecbd;
+    padding-top: 20px;
+}
+.infoLine h2 {
+    margin-bottom: 2px;
+}
+.priceBox {
+    width: 50%;
 }
 .priceInfo p {
     color: #e2ecbd;
-    font-size: .93rem;
+    font-size: .9rem;
+}
+.saladPrice {
+    font-size: 4.6rem !important;
+    font-weight: 600;
+    margin-top: -21px;
 }
 .checkIcon {
     font-size: 1.2rem;
@@ -183,7 +214,7 @@
     background: #fff;
 }
 #aBox {
-    padding: 90px 0 80px;
+    padding: 90px 0;
 }
 #aTextBox {
     width: 50%;
@@ -335,7 +366,7 @@
     background: #fff;
 }
 #cBox {
-    padding: 100px 0 85px;
+    padding: 100px 0;
 }
 #cTextBox {
     width: 50%;
@@ -377,14 +408,15 @@
     background: #fff;
 }
 #dBox {
-    padding-bottom: 125px;
+    padding: 120px 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
+    border-top: 1px solid #c5c5c5;
 }
 .dTitleBox {
     /* width: 25%; */
-    width: 30%;
+    width: 28%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -393,13 +425,16 @@
     border-bottom-right-radius: 35%;
     background: #788841; */
 }
-.dTitleBox h1 {
+.dTitle h1 {
     /* font-size: 2.8rem;
     color: #f8f9f4; */
     
-    font-size: 3.2rem;
+    font-size: 5.23rem;
     color: #333;
     text-align: center;
+}
+.dTitle h1:nth-child(2) {
+    margin-top: -25px;
 }
 .dLine {
     display: flex;
@@ -410,7 +445,7 @@
     height: 4px;
     background: #d2dcb0; */
 
-    width: 80px;
+    width: 70px;
     height: 4px;
     background: #e5e6e0;
     transition: .3s;
@@ -421,7 +456,7 @@
     background: #788841;
 }
 .dImgBox {
-    width: 70%;
+    width: 72%;
     overflow: hidden;
 }
 .dSlide {
@@ -452,7 +487,7 @@
 }
 
 .dTextBox p:first-child {
-    font-size: 1.55rem;
+    font-size: 1.63rem;
     font-weight: 600;
     color: #e5e6e0;
     letter-spacing: -0.5px;
@@ -514,13 +549,240 @@
 }
 
 
-/* section E */
+/* section F */
 #fSec {
     width: 100%;
+    justify-content: center;
     background: #fff;
 }
-#fBox {
-    padding: 90px 0;
+#fBigBox {
+    position: relative;
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 120px 20px;
+}
+.fBox {
     width: 100%;
+}
+.fBox p:first-child {
+    font-size: 2rem;
+    color: #333;
+}
+.fBox p {
+    font-size: .88rem;
+    color: #616161;
+}
+.evtBox {
+    padding-top: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 6%;
+}
+.fTitle {
+    width: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fNum {
+    font-size: 6rem;
+    font-weight: 600;
+    color: #445b17;
+}
+.evtBox:nth-child(2n) .fNum {
+    color: #5b1717;
+}
+.fTitle p:last-child {
+    z-index: 1;
+}
+.fIcon {
+    font-size: 3rem;
+    color: #788841;
+}
+
+.fText {
+    width: 50%;
+    padding-left: 4%;
+}
+.fText p:first-child {
+    font-size: 1.45rem;
+    font-weight: 600;
+    color: #445b17;
+}
+.evtBox:nth-child(2n) .fText p:first-child {
+    color: #5b1717;
+}
+.wineRcolor {
+    color: #5b1717;
+}
+.wineGcolor {
+    color: #445b17;
+}
+.fText p:nth-child(2) {
+    font-size: .96rem;
+    font-weight: 600;
+    color: #636363;
+    padding: 2px 0;
+}
+.fInfo {
+    font-size: .85rem;
+    color: #929292;
+}
+.fStar {
+    width: 20%;
+}
+.starInfo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+}
+.starInfo p {
+    font-size: .9rem;
+    font-weight: 600;
+    width: 15%;
+    text-align: center;
+    color: #333;
+}
+.starLine {
+    width: 60%;
+    height: 6px;
+    background: #d2dcb0;
+}
+.evtBox:nth-child(2n) .starLine {
+    background: #dcb0b0;
+}
+.starColor {
+    height: 6px;
+    background: #788841;
+}
+.evtBox:nth-child(2n) .starColor {
+    background: #5b1717;
+}
+.fOne .cp {
+    width: 20%;
+}
+.fOne .sp {
+    width: 40%;
+}
+.fOne .tp {
+    width: 60%;
+}
+.fOne .bp {
+    width: 60%;
+}
+
+.fTwo .cp {
+    width: 60%;
+}
+.fTwo .sp {
+    width: 80%;
+}
+.fTwo .tp {
+    width: 20%;
+}
+.fTwo .bp {
+    width: 40%;
+}
+
+.fThr .cp {
+    width: 80%;
+}
+.fThr .sp {
+    width: 60%;
+}
+.fThr .tp {
+    width: 20%;
+}
+.fThr .bp {
+    width: 20%;
+}
+
+.fFou .cp {
+    width: 80%;
+}
+.fFou .sp {
+    width: 60%;
+}
+.fFou .tp {
+    width: 20%;
+}
+.fFou .bp {
+    width: 20%;
+}
+
+
+
+#gSec {
+    width: 100%;
+    justify-content: center;
+    background: #fff;
+}
+#gBigBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 90px 20px 100px;
+    border-top: 1px solid #c5c5c5;
+}
+.gBox {
+    width: 100%;
+}
+.gBox p:first-child {
+    font-size: 2rem;
+    color: #333;
+}
+.gBox p {
+    font-size: .88rem;
+    color: #616161;
+}
+.evtGbox {
+    padding-top: 45px;
+    width: 33%;
+    display: flex;
+    align-items: center;
+}
+.gTitle {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gNum {
+    position: absolute;
+    font-size: 11rem;
+    font-weight: 600;
+    color: #f8f9f4;
+}
+.gTitle p:last-child {
+    z-index: 1;
+}
+.gIcon {
+    font-size: 3rem;
+    color: #788841;
+}
+
+.gText {
+    width: 70%;
+    padding: 20px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.gText p:first-child {
+    font-size: 1.45rem;
+    padding-bottom: 6px;
+    font-weight: 600;
+    color: #445b17;
+}
+.gInfo {
+    font-size: .85rem;
+    color: #929292;
 }
