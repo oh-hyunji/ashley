@@ -278,7 +278,7 @@ $(document).ready(function(){
     
             // section F scroll evt
             if(scrollT >= fSec - minusNum) {
-                $(".fIcon").stop().fadeIn(800);
+                $(".fIcon").stop().animate({opacity:1});
             }
     
             // section h scroll evt
@@ -373,7 +373,7 @@ $(document).ready(function(){
     
             // section F scroll evt
             if(scrollT >= fSec - minusNumMidea) {
-                $(".fIcon").stop().fadeIn(800);
+                $(".fIcon").stop().animate({opacity:1});
             }
     
             // section h scroll evt
@@ -404,8 +404,10 @@ $(document).ready(function(){
 
 window.onload = function () {
     localStorage.clear(); 
+
     $(".changeTitle").letterfx({"fx":"fly-right","backwards":false,"timing":100,"fx_duration":"1200ms","letter_end":"stay","element_end":"stay"});
     $(".changeTitle2").letterfx({"fx":"wave","fx_duration":"500ms","letter_end":"rewind","element_end":"stay"});
+
     // 모바일 화면 (480) 보다 작을때 
     var docWidth2 = $('html,body').width();
     if(docWidth2 <= 480){

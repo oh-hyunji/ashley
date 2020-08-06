@@ -459,7 +459,7 @@
     z-index: 1;
 }
 .fIcon {
-    display: none;
+    opacity: 0;
     font-size: 3rem;
     color: #788841;
 }
