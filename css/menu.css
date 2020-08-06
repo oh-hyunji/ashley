@@ -1,32 +1,10 @@
 @charset "UTF-8";
 
 /* header */
+
 #header {
+    height: 600px;
     overflow: unset;
-}
-#subHeaderBox {
-    width: 100%;
-    height: 630px;
-    overflow: hidden;
-    background: #fff;
-}
-.menu {
-    width: 100px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding: unset !important;
-}
-.menuLine {
-    position: absolute;
-    width: 42px;
-    height: 2px;
-    background: #d2dcb0;
-    bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
 }
 .logo p {
     color: #788841;
@@ -62,6 +40,7 @@
     width: 60%;
     height: 100%;
     float: right;
+    right: 5%;
 }
 .infoText {
     position: absolute;
@@ -82,10 +61,10 @@
 .lineStyle {
     position: absolute;
     width: 1px;
-    height: 150px;
+    height: 198px;
     background: #e2ecbd;
     top: 0;
-    right: 100px;
+    right: 70px;
 }
 .priceInfo h2 {
     color: #fbfdf1;
@@ -103,24 +82,29 @@
 }
 .infoLine h2 {
     margin-bottom: 2px;
+    font-size: 1rem;
 }
 .priceBox {
     width: 50%;
 }
 .priceInfo p {
     color: #e2ecbd;
-    font-size: .9rem;
+    font-size: .83rem;
 }
 .saladPrice {
-    font-size: 4.6rem !important;
+    font-size: 4rem !important;
     font-weight: 600;
-    margin-top: -21px;
+    margin-top: -12px;
+}
+.priceHan {
+    font-size: 1.2rem;
+    padding-left: 5px;
 }
 .checkIcon {
     font-size: 1.2rem;
 }
 #infoBoxLeft {
-    width: 64%;
+    width: 60%;
     top: 93px;
     position: absolute;
     display: flex;
@@ -131,8 +115,12 @@
     z-index: 1;
     height: 94%;
 }
-.movie {
+#infoBoxLeft .movie {
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .leftTitle {
     position: absolute;
@@ -141,6 +129,7 @@
     transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
+    z-index: 1;
 }
 .leftTitle h1 {
     font-size: 5.5rem;
@@ -176,13 +165,14 @@
     justify-content: center;
     align-items: center;
 }
-#typeBox li {
+.tMenu {
     width: 125px;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
+    cursor: pointer;
 }
 #typeBox a {
     color: #f8f9f4;
@@ -190,7 +180,7 @@
 }
 .typeLine {
     position: absolute;
-    width: 46px;
+    width: 0;
     height: 2px;
     background: #d2dcb0;
     bottom: 22px;
@@ -221,7 +211,7 @@
     padding-left: 100px;
 }
 .aTitle, .aTitle2 {
-    opacity: 1;
+    opacity: 0;
     letter-spacing: 3.2px;
     color: #222222;
     font-size: 5.23rem;
@@ -234,14 +224,20 @@
     color: #424242;
     font-size: 1.03rem;
     font-weight: 600;
+    opacity: 0;
 }
 .aText {
     display: block;
     padding-top: 6px;
     color: #929292;
     font-size: .96rem;
+    opacity: 0;
+}
+.aMediaText {
+    display: none;
 }
 #aImgBox {
+    opacity: 0;
     width: 50%;
     overflow: hidden;
 }
@@ -324,6 +320,7 @@
 }
 
 .bMenu img {
+    opacity: 0;
     width: 365px;
     position: absolute;
     top: 0;
@@ -373,7 +370,7 @@
     padding-left: 40px;
 }
 .cTitle, .cTitle2 {
-    opacity: 1;
+    opacity: 0;
     letter-spacing: 3.2px;
     color: #222222;
     font-size: 5.23rem;
@@ -386,12 +383,17 @@
     color: #424242;
     font-size: 1.03rem;
     font-weight: 600;
+    opacity: 0;
 }
 .cText {
     display: block;
     padding-top: 6px;
     color: #929292;
     font-size: .96rem;
+    opacity: 0;
+}
+.cMediaText {
+    display: none;
 }
 #cImgBox {
     width: 50%;
@@ -399,6 +401,7 @@
 }
 #cImgBox img {
     width: 100%;
+    margin-left: -100%;
 }
 
 
@@ -428,7 +431,7 @@
 .dTitle h1 {
     /* font-size: 2.8rem;
     color: #f8f9f4; */
-    
+    opacity: 0;
     font-size: 5.23rem;
     color: #333;
     text-align: center;
@@ -445,7 +448,7 @@
     height: 4px;
     background: #d2dcb0; */
 
-    width: 70px;
+    width: 55px;
     height: 4px;
     background: #e5e6e0;
     transition: .3s;
@@ -461,7 +464,7 @@
 }
 .dSlide {
     display: flex;
-    width: 1300px;
+    width: 1625px;
     justify-content: center;
     align-items: center;
 }
@@ -475,12 +478,10 @@
 }
 .dImgInfo img {
     width: 85%;
-    -webkit-filter: grayscale(100%);
-    filter: gray;
+    opacity: .4;
 }
 .dImgOn {
-    -webkit-filter: unset !important;
-    filter: unset !important;
+    opacity: 1 !important;
 }
 .dTextBox {
     padding: 8px 20px;
@@ -526,6 +527,7 @@
 }
 
 .eTitle h1 {
+    opacity: 0;
     font-size: 5.23rem;
     color: #f8f9f4;
 }
@@ -574,6 +576,7 @@
 .fBox p {
     font-size: .88rem;
     color: #616161;
+    opacity: 0;
 }
 .evtBox {
     padding-top: 45px;
@@ -581,6 +584,7 @@
     display: flex;
     align-items: center;
     padding-left: 6%;
+    opacity: 0;
 }
 .fTitle {
     width: 14%;
@@ -629,8 +633,12 @@
     padding: 2px 0;
 }
 .fInfo {
+    display: block;
     font-size: .85rem;
     color: #929292;
+}
+.fMinfo {
+    display: none;
 }
 .fStar {
     width: 20%;
@@ -656,65 +664,87 @@
 .evtBox:nth-child(2n) .starLine {
     background: #dcb0b0;
 }
-.starColor {
+.starColor1, .starColor2, .starColor3, .starColor4 {
     height: 6px;
     background: #788841;
+    width: 0;
 }
-.evtBox:nth-child(2n) .starColor {
+.evtBox:nth-child(2n) .starColor1, .evtBox:nth-child(2n) .starColor2, .evtBox:nth-child(2n) .starColor3, .evtBox:nth-child(2n) .starColor4 {
     background: #5b1717;
 }
+
 .fOne .cp {
-    width: 20%;
+    animation : width20 3s forwards;
 }
 .fOne .sp {
-    width: 40%;
+    animation : width40 3s forwards;
 }
 .fOne .tp {
-    width: 60%;
+    animation : width60 3s forwards;
 }
 .fOne .bp {
-    width: 60%;
+    animation : width60 3s forwards;
 }
 
 .fTwo .cp {
-    width: 60%;
+    animation : width60 3s forwards;
 }
 .fTwo .sp {
-    width: 80%;
+    animation : width80 3s forwards;
 }
 .fTwo .tp {
-    width: 20%;
+    animation : width20 3s forwards;
 }
 .fTwo .bp {
-    width: 40%;
+    animation : width40 3s forwards;
 }
 
 .fThr .cp {
-    width: 80%;
+    animation : width80 3s forwards;
 }
 .fThr .sp {
-    width: 60%;
+    animation : width60 3s forwards;
 }
 .fThr .tp {
-    width: 20%;
+    animation : width20 3s forwards;
 }
 .fThr .bp {
-    width: 20%;
+    animation : width20 3s forwards;
 }
 
 .fFou .cp {
-    width: 80%;
+    animation : width80 3s forwards;
 }
 .fFou .sp {
-    width: 60%;
+    animation : width60 3s forwards;
 }
 .fFou .tp {
-    width: 20%;
+    animation : width20 3s forwards;
 }
 .fFou .bp {
-    width: 20%;
+    animation : width20 3s forwards;
 }
 
+@keyframes width20 {
+    from { width: 0; }
+    to { width: 20%; }
+}
+@keyframes width40 {
+    from { width: 0; }
+    to { width: 40%; }
+}
+@keyframes width60 {
+    from { width: 0; }
+    to { width: 60%; }
+}
+@keyframes width80 {
+    from { width: 0; }
+    to { width: 80%; }
+}
+@keyframes width100 {
+    from { width: 0; }
+    to { width: 100%; }
+}
 
 
 #gSec {
@@ -740,6 +770,7 @@
     color: #333;
 }
 .gBox p {
+    opacity: 0;
     font-size: .88rem;
     color: #616161;
 }
@@ -750,7 +781,7 @@
     align-items: center;
 }
 .gTitle {
-    width: 50%;
+    width: 55%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -761,8 +792,14 @@
     font-weight: 600;
     color: #f8f9f4;
 }
-.gTitle p:last-child {
+.gImg {
+    width: 100%;
     z-index: 1;
+    overflow: hidden;
+}
+.gImg img {
+    width: 100%;
+    margin-left: -100%;
 }
 .gIcon {
     font-size: 3rem;
@@ -770,11 +807,11 @@
 }
 
 .gText {
-    width: 70%;
-    padding: 20px 10px;
+    width: 45%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    opacity: 0;
 }
 .gText p:first-child {
     font-size: 1.45rem;

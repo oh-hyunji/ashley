@@ -67,9 +67,9 @@
 }
 .aInfo h2{
     opacity: 0;
-    font-size: 3.1rem;
+    font-size: 3.5rem;
     color: #333;
-    margin-top: -13px;
+    margin-top: -12px;
     letter-spacing: -0.5px;
 }
 .aInfo h2:last-child {
@@ -90,6 +90,7 @@
     background: #e5e6e0;
     transition: .3s;
     margin-right: 2px;
+    cursor: pointer;
 }
 .slOn {
     background: #788841;
@@ -133,7 +134,7 @@
 }
 .conceptInfo h3 {
     width: 100%;
-    font-size: 2rem;
+    font-size: 2.5rem;
     z-index: 1;
     margin: 50px 0 4px;
     color: #e5e6e0;
@@ -268,12 +269,6 @@
     display: none;
 }
 #page {
-    /* display: flex;
-    justify-content: end;
-    position: absolute;
-    bottom: 16%;
-    float: right;
-    left: 23%; */
     display: flex;
     justify-content: end;
     position: absolute;
@@ -286,6 +281,7 @@
     border-radius: 100%;
     background: #445b17;
     margin: 7px;
+    cursor: pointer;
 }
 .cOn {
     background: #fff;
@@ -479,7 +475,8 @@
     font-size: 1.45rem;
     padding-bottom: 6px;
     font-weight: 600;
-    color: #445b17;
+    color: #636363;
+    letter-spacing: -0.5px;
 }
 .fInfo {
     font-size: .85rem;
@@ -679,9 +676,12 @@
     font-size: 3.83rem;
     cursor: pointer;
 }
-.iText {
+.iText, .iText2 {
     font-size: .93rem;
     opacity: 0;
+}
+.iMtext {
+    display: none;
 }
 
 

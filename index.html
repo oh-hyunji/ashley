@@ -11,7 +11,9 @@
      <link rel="stylesheet" href="./css/jquery-letterfx.min.css">
      <link rel="stylesheet" href="./css/style.css">
      <link rel="stylesheet" href="./css/index.css">
+     <link rel="stylesheet" href="./css/media-style.css">
      <link rel="stylesheet" href="./css/media-index.css">
+     <link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
      <!-- jquery-3.5.0.js -->
      <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -19,6 +21,7 @@
      <script src="./js/jquery-letterfx.min.js"></script>
      <script src="./js/tuxsudo.min.js"></script>
      <script src="./js/index.js"></script>
+     <script src="./js/all.js"></script>
 </head>
 <body>
     <header id="header">
@@ -26,33 +29,33 @@
             <img src="./images/shadow5.png" alt="그림자 이미지">
         </div>
         <div id="imgBox">
-            <img src="./images/headerImg1.jpg" alt="헤더 이미지">
-            <img src="./images/headerImg2.jpg" alt="헤더 이미지">
-            <img src="./images/headerImg3.jpg" alt="헤더 이미지">
+            <img class="headImg1" src="./images/headerImg7.jpg" alt="헤더 이미지">
+            <img class="headImg2" src="./images/headerImg8.jpg" alt="헤더 이미지">
+            <img class="headImg3" src="./images/headerImg9.jpg" alt="헤더 이미지">
         </div>
         <div id="topBox">
             <nav id="navi">
                 <div class="logo">
-                    <p class="hoonTop">Ashley</p>
+                    <a href="./index.html"><p class="hoonTop">Ashley</p></a>
                 </div>
                 <div id="mSideBt">
-                   <p><i class="fas fa-sign-in-alt"></i></p>
+                   <p><i class="xi-plus"></i></p>
                 </div>
                 <ul class="naviBox">
-                    <li class="menu"><a href="#">Brand</a></li>
-                    <li class="menu"><a href="menu.html">Menu</a></li>
-                    <li class="menu"><a href="#">Benefit</a></li>
-                    <li class="menu"><a href="#">Store</a></li>
-                    <li class="menu"><a href="#">Customer</a></li>
-                    <li class="menu"><a href="#"><i class="fas fa-sign-in-alt loginIcon"></i></a></li>
+                    <li id="brand" class="menu"><a href="#">Brand</a><div class="menuLine"></div></li>
+                    <li id="menu" class="menu"><a href="./menu.html">Menu</a><div class="menuLine"></div></li>
+                    <li id="benefit" class="menu"><a href="#">Benefit</a><div class="menuLine"></div></li>
+                    <li id="store" class="menu"><a href="#">Store</a><div class="menuLine"></div></li>
+                    <li id="customer" class="menu"><a href="#">Customer</a><div class="menuLine"></div></li>
+                    <li id="login" class="menu"><a href="#"><i class="fas fa-sign-in-alt loginIcon"></i></a></li>
                 </ul>
             </nav>
         </div>
         <div id="headerBox">
             <div id="headerTitle">
-                <h1 class="changeTitle hoonTop">Avocado</h1>
-                <h1 class="changeTitle2 hoonTop">Green Salad</h1>
-                <p class="changeCont han">신선한 숲속의 버터 아보카도와 향긋하고 달콤한 과일 그리고 새콤한 라코타 치즈가 <br>만나 행복함을 드립니다. 지금 상세메뉴 버튼을 클릭해 보러 오세요.</p>
+                <h1 class="changeTitle hoonTop">Black Label</h1>
+                <h1 class="changeTitle2 hoonTop">Chef Edition</h1>
+                <p class="changeCont han">깊고 풍부한 풍미의 프로볼로네 치즈와 두툼하고 육즙이 가득한 블랙라벨 스테이크가 <br>만나 행복함을 드립니다. 지금 상세메뉴 버튼을 클릭해 보러 오세요.</p>
                 <button class="cont">LOOK MENU DETAIL</button>
             </div>
             <div id="menuLine"></div>
@@ -72,9 +75,9 @@
                 <source src="./mediaImg/headerVideo.mp4" type="video/mp4"> 
              </video>
              <div id="mediaTitle">
-                <p class="hoonTop">Welcome, Restaurant</p>
+                <p class="hoonTop">American</p>
                 <p class="hoonTop">Grill & Salad</p>
-                <p class="hoonTop">↓</p>
+                <!-- <p class="hoonTop">↓</p> -->
              </div>
         </div>
 
@@ -91,7 +94,7 @@
                 <p class="han">지금 특별함과 정성이 가득한 아메리칸 고메 뷔페 애슐리에 예약하세요.</p>
             </div>
              <!-- 모바일용 -->
-             <p class="rMedia">American Grill &amp; Salad.</p>
+             <p class="rMedia">Welcome, Restaurant</p>
             <button>RESERVATION</button>
         </div>
     </div>
@@ -101,20 +104,20 @@
             <div class="aTitle">
                 <div class="aInfo">
                     <!-- <p>Ashley</p> -->
-                    <h2 class="aTopTo">CONCEPT</h2>
-                    <h2 class="aTopBo">ASHLEY TYPE 4</h2>
+                    <h2 class="hoonTop aTopTo">CONCEPT</h2>
+                    <h2 class="hoonTop aTopBo">ASHLEY TYPE 4</h2>
                     <div class="aLine">
-                        <div class="slideL slOn"></div>
-                        <div class="slideL"></div>
-                        <div class="slideL"></div>
-                        <div class="slideL"></div>
+                        <div class="slideL slOn" data-concept="classic"></div>
+                        <div class="slideL" data-concept="premium"></div>
+                        <div class="slideL" data-concept="queens"></div>
+                        <div class="slideL" data-concept="grill"></div>
                     </div>
                     <p class="han">에슐리 만의 분위기와 가치를 담은 4가지 타입의 다양한 공간과 문화를<br>고객님께서 선택 하시고 즐기며 행복감을 느낄 수 있습니다.</p>
                 </div>
             </div>
             <div class="aSlide">
                 <div class="aBox">
-                    <div class="numberAbox">
+                    <div class="numberAbox" data-concept="classic">
                         <div class="conceptInfo">
                             <p class="on1">01</p>
                             <h3 class="hoonTop on2">Classic</h3>
@@ -122,7 +125,7 @@
                         </div>
                         <img src="./images/con1.jpg" alt="컨셉이미지" class="on4">
                     </div>
-                    <div class="numberAbox">
+                    <div class="numberAbox" data-concept="premium">
                         <div class="conceptInfo">
                             <p>02</p>
                             <h3 class="hoonTop">Premium</h3>
@@ -130,7 +133,7 @@
                         </div>
                         <img src="./images/con2.jpg" alt="컨셉이미지">
                     </div>
-                    <div class="numberAbox">
+                    <div class="numberAbox" data-concept="queens">
                         <div class="conceptInfo">
                             <p>03</p>
                             <h3 class="hoonTop">Queens</h3>
@@ -138,7 +141,7 @@
                         </div>
                         <img src="./images/con3.jpg" alt="컨셉이미지">
                     </div>
-                    <div class="numberAbox">
+                    <div class="numberAbox" data-concept="grill">
                         <div class="conceptInfo">
                             <p>04</p>
                             <h3 class="hoonTop">83 Grill</h3>
@@ -152,7 +155,7 @@
         <div id="mBigAbox"> 
             <div class="titleBox">
                 <p>Ashley</p>
-                <h2>CONCEPT</h2>
+                <h2 class="hoonTop">CONCEPT</h2>
                 <div class="line"></div>
                 <!-- // 모바일 -->
                 <p class="han titlem">애슐리 만의 분위기와 가치를 담은 4가지<br>타입의 공간과 문화를 느끼실 수 있습니다.</p>
@@ -230,9 +233,9 @@
             </div>
             
             <div id="bSlide">
-                <img src="./images/m1.png" alt="메뉴 슬라이드 이미지">
-                <img src="./images/m2.png" alt="메뉴 슬라이드 이미지">
-                <img src="./images/m3.png" alt="메뉴 슬라이드 이미지">
+                <img src="./images/m1.png" class="bImg1" alt="메뉴 슬라이드 이미지">
+                <img src="./images/m2.png" class="bImg2" alt="메뉴 슬라이드 이미지">
+                <img src="./images/m3.png" class="bImg3" alt="메뉴 슬라이드 이미지">
             </div>
         </div>
     </section>
@@ -296,11 +299,11 @@
 
     <section id="dSec">
         <div id="dTitle">
-            <p>Ashley</p>
+            <!-- <p>Ashley</p> -->
             <h1>American Grill & Salad</h1>
         </div>
         <div id="video">
-            <video class="movie" autoplay loop muted playsinline> 
+            <video id="movie1" class="movie" loop muted playsinline> 
                 <source src="./images/video.mp4" type="video/mp4"> 
              </video>
         </div>
@@ -393,7 +396,12 @@
             </div>
         </div>
     </section>
-
+    <!-- people walking back movie -->
+    <div id="backVideo">
+        <video id="movie2" class="movie" loop muted playsinline> 
+            <source src="./images/video5.mp4" type="video/mp4"> 
+        </video>
+    </div>
 
 
     <!-- ashley map search -->
@@ -403,8 +411,9 @@
                 <img src="./images/mapiso.png" alt="이미지">
             </div>
             <div id="iTextBox">
-                <p class="han iText">고객님의 주변 애슐리 매장을 쉽고 빠르게 찾아드립니다</p>
-                <p class="han iText">빠른 매장 찾기를 통해 고객님이 원하시는 애슐리 매장 위치를 확인하세요!</p>
+                <p class="han iText">고객님의 주변 애슐리 매장을 쉽고 빠르게 찾아드립니다.</p>
+                <p class="han iText2">빠른 매장 찾기를 통해 고객님이 원하시는 애슐리 매장 위치를 확인하세요!</p>
+                <p class="han iMtext">빠른 매장 찾기를 통해 고객님의 애슐리 매장 위치를 확인하세요!</p>
                 <p class="iTitle hoonTop">Quick Search Map →</p>
             </div>
        </div>
@@ -417,8 +426,8 @@
                 <ul class="han">
                     <li>개인정보처리방침&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
                     <li>영상정보처리기기 운영·관리방침&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
-                    <li>서비스 이용약관&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</li>
-                    <li>SITE MAP</li>
+                    <li>서비스 이용약관&nbsp;&nbsp;&nbsp;</li>
+                    <li>|&nbsp;&nbsp;&nbsp;SITE MAP</li>
                 </ul>
             </div>
             <div id="footMidle">
@@ -427,7 +436,7 @@
                     <p class="han">매장 이용관련 문의 및 불편사항 : 1577-1259&nbsp;&nbsp;|&nbsp;&nbsp;이메일 : elandfood@eland.co.kr&nbsp;&nbsp;|&nbsp;&nbsp;정보보호관리제게인증 : 인증기간 2019.08.27 ~ 2022.08.26</p>
                 </div>
                 <div id="mediaCopy">
-                    <p class="han">(주) 이랜드이츠&nbsp;&nbsp;|&nbsp;&nbsp;대표이사 : 김완식&nbsp;&nbsp;|&nbsp;&nbsp;개인정보보호 책임자 : 김완식&nbsp;&nbsp;|&nbsp;&nbsp;서울특별시 금천구 가산디지털로1로 149&nbsp;&nbsp;|&nbsp;&nbsp;E POINT 멤버쉽 관련 문의 : 1833-6439&nbsp;&nbsp;|&nbsp;&nbsp;매장 이용관련 문의 및 불편사항 : 1577-1259&nbsp;&nbsp;|&nbsp;&nbsp;이메일 : elandfood@eland.co.kr&nbsp;&nbsp;|&nbsp;&nbsp;정보보호관리제게인증 : 인증기간 2019.08.27 ~ 2022.08.26</p>
+                    <p class="han">(주) 이랜드이츠&nbsp;&nbsp;|&nbsp;&nbsp;대표이사 : 김완식&nbsp;&nbsp;|&nbsp;&nbsp;개인정보보호 책임자 : 김완식&nbsp;&nbsp;|&nbsp;&nbsp;서울특별시 금천구 가산디지털로1로 149&nbsp;&nbsp;|&nbsp;&nbsp;E POINT 멤버쉽 관련 문의 : 1833-6439&nbsp;&nbsp;|&nbsp;&nbsp;매장 이용관련 문의 및 불편사항 : 1577-1259&nbsp;&nbsp;|&nbsp;&nbsp;정보보호관리제게인증 : 인증기간 2019.08.27 ~ 2022.08.26</p>
                 </div>
                 <div id="endLogo">
                     <p class="hoonTop">Ashley</p>
@@ -448,12 +457,7 @@
         </div>
     </footer>
     
-    <!-- people walking back movie -->
-    <div id="backVideo">
-        <video class="movie" autoplay loop muted playsinline> 
-            <source src="./images/video5.mp4" type="video/mp4"> 
-         </video>
-    </div>
+   
 
     <!-- homestaurant side button -->
     <div id="sideBt">
@@ -468,6 +472,25 @@
         </div>
     </div>
 
+    <!-- mobile menu -->
+    <div id="mobileNavi">
+        <div id="moBox">
+            <p class="moClose"><i class="xi-close"></i></p>
+            <div class="moTop">
+                <div class="moLogo">
+                    <a href="./index.html" class="hoonTop">Ashley</a>
+                </div>
+            </div>
+            <ul class="moMenuBox">
+                <li class="moMenu"><span class="moNum">01.&nbsp;&nbsp;</span><a href="#" class="hoonTop">Brand</a>&nbsp;&nbsp;&nbsp;<span class="han">브랜드 소개</span></li>
+                <li class="moMenu"><span class="moNum">02.&nbsp;&nbsp;</span><a href="./menu.html" class="hoonTop">Menu</a>&nbsp;&nbsp;&nbsp;<span class="han">컨셉 및 메뉴</span></li>
+                <li class="moMenu"><span class="moNum">03.&nbsp;&nbsp;</span><a href="#" class="hoonTop">Benefit</a>&nbsp;&nbsp;&nbsp;<span class="han">제휴 카드</span></li>
+                <li class="moMenu"><span class="moNum">04.&nbsp;&nbsp;</span><a href="#" class="hoonTop">Store</a>&nbsp;&nbsp;&nbsp;<span class="han">매장 위치</span></li>
+                <li class="moMenu"><span class="moNum">05.&nbsp;&nbsp;</span><a href="#" class="hoonTop">Customer</a>&nbsp;&nbsp;&nbsp;<span class="han">고객 센터</span></li>
+                <li class="moMenu"><span class="moNum">etc.&nbsp;&nbsp;</span><a href="#" class="hoonTop">Login</a>&nbsp;&nbsp;&nbsp;<span class="han">로그인</span></li>
+            </ul>
+        </div>
+    </div>
    
 
     

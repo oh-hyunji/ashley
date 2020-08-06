@@ -76,23 +76,22 @@
         overflow: hidden;
         position: relative;
     }
-    #mSideBt {
-        padding-right: 20px;
-        color: #eee;
-        display: block;
+    #mediaHeader .movie {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    #msideBt p {
-        font-size: 1rem;
-    }
+    
     #mediaTitle {
         position: absolute;
-        top: 55%;
+        top: 50%;
         left: 50%;
         z-index: 1;
-        color: rgba(255, 255, 255, 0.5);
-        transform: translate(-50%, -55%);
-        font-size: 1.5rem;
-        font-weight: 300;
+        color: #fbfdf1;
+        transform: translate(-50%, -50%);
+        font-size: 2.6rem;
         text-align: center;
         width: 100%;
         letter-spacing: 1px;
@@ -108,6 +107,10 @@
     }
     #shadow, #imgBox, #headerBox, .naviBox {
         display: none;
+    }
+
+    #reserve {
+        height: 60px;
     }
     .rTitle {
         display: none;
@@ -129,27 +132,27 @@
 
 
 
-#mAbox {
-    width: 100%;
-    display: flex;
-    padding: 0;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin: 0 auto;
-}
+    #mAbox {
+        width: 100%;
+        display: flex;
+        padding: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
 
 
 
 
-.smallLine {
-    width: 20px;
-    height: 2.4px;
-    background: #788841;
-    margin: 15px auto;
-}
-.change {
-    background: #d3d6b9;
-}
+    .smallLine {
+        width: 20px;
+        height: 2.4px;
+        background: #788841;
+        margin: 15px auto;
+    }
+    .change {
+      background: #d3d6b9;
+    }
 
     #bigAbox {
         display: none;
@@ -188,7 +191,7 @@
     .titlem {
         display: inline-block;
         font-size: .83rem;
-        color: #616161;
+        color: #757575;
         margin-bottom: 90px;
         display: inline-block;
     }
@@ -216,24 +219,21 @@
     }
 
     
-.info {
-    width: 100%;
-    height: 300px;
-    background: #e2e2d8;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    .info {
+        width: 100%;
+        height: 300px;
+        background: #e2e2d8;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
 
-    position: absolute;
+        position: absolute;
         top: 0;
         left: 0;
         background: rgba(34, 34, 34, 0.6);
-}
-
-
-
+    }
 
     .aCont:nth-child(2n) .info{
         background: rgba(34, 34, 34, 0.9);
@@ -245,13 +245,13 @@
         color: #fff;
         font-size: 1.7rem;
         width: 100%;
-    display: inline-block;
+        display: inline-block;
     }
     .info p {
-        color: #fff;
+        color: #dedede;
         width: 100%;
-    display: inline-block;
-    font-size: 0.83rem;
+        display: inline-block;
+        font-size: 0.83rem;
     }
     .smallLine {
         background: #fff;
@@ -280,7 +280,8 @@
         height: 53%;
     }
     #page {
-        display: none;
+        bottom: 40px;
+        right: 0;
     }
     #bTitle h1 {
         font-size: 3.4rem;
@@ -308,7 +309,7 @@
     #moreBt {
         font-size: 0.68rem;
         padding: 10px 20px;
-        margin-top: 12px;
+        margin-top: 20px;
     }
  
 
@@ -337,7 +338,7 @@
         display: block;
         padding-top: 4px;
         color: #929292;
-        font-size: .75rem;
+        font-size: .8rem;
     }
     .cBt {
         margin-top: 20px;
@@ -388,7 +389,7 @@
         display: block;
         padding-top: 4px;
         color: #929292;
-        font-size: .75rem;
+        font-size: .8rem;
     }
     .gBt {
         margin-top: 20px;
@@ -425,11 +426,7 @@
     .fBox {
         text-align: center;
     }
-    .fText p:first-child {
-        width: 100%;
-        font-size: 1.2rem;
-        padding-bottom: 2px;
-    }
+
     .fBox p {
         font-size: .75rem;
     }
@@ -442,9 +439,19 @@
         width: 100%;
         padding-top: 40px;
     }
+    .fNum {
+        font-size: 5rem;
+    }
+    .fText {
+        padding: 20px 0 20px 10px;
+    }
+    .fText p:first-child {
+        width: 100%;
+        font-size: 1.2rem;
+        padding-bottom: 2px;
+    }
     .fInfo {
-        font-size: .82rem;
-        
+        font-size: .8rem;
     }
 
     #hSec {
@@ -462,7 +469,7 @@
         padding: 0;
         font-weight: 100;
         display: block;
-        width: 80%;
+        width: 81%;
         margin: 0 auto;
     }
     .hTextInfo {
@@ -476,7 +483,8 @@
         font-size: .78rem;
     }
     #backVideo .movie {
-        width: auto;
+        height: 100vh;
+        width: initial;
     }
 
     #iImgBox {
@@ -489,54 +497,19 @@
         padding: 10px 25px;
     }
     .iText {
-        font-size: .73rem;
+        font-size: .8rem;
+    }
+    .iText2 {
+        display: none;
+    }
+    .iMtext {
+        display: block;
+        font-size: .8rem;
+        opacity: 0;
     }
     .iTitle {
         font-size: 1.83rem;
     }
 
-    #footBox {
-        padding: 25px 10px 15px;
-    }
-    #footTop ul {
-        font-size: .56rem;
-    }
-    #copy {
-        display: none;
-    }
-    #mediaCopy {
-        display: block;
-        margin-top: 8px;
-    }
-    #mediaCopy p {
-        padding-bottom: 2px;
-        font-size: .43rem;
-        color: #d2dcb0;
-    }
-    .copyRight {
-        font-size: .43rem;
-    }
-    #soical p {
-        font-size: 1.2rem;
-    }
-    #footMidle {
-        margin: 10px 0 15px;
-        flex-wrap: wrap;
-    }
-    #endLogo {
-        display: none;
-    }
-
-    
-    #sideBt {
-        display: none;
-        bottom: 80px;
-        background: rgba(68, 91, 23, 0.5);
-        font-size: .6rem;
-    }
-    #topBt {
-        background: rgba(120, 136, 65, .5);
-        font-size: .6rem;
-    }
 }
 

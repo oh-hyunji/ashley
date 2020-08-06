@@ -1,6 +1,4 @@
 $(document).ready(function(){
-    
-
     var docWidth = $('html,body').width();
     $('#imgBox img').width(docWidth);
     $('#shadow img').width(docWidth);
@@ -10,25 +8,44 @@ $(document).ready(function(){
         $('#imgBox img').width(docWidth);
         $('#shadow img').width(docWidth);
     });
-    
+
+    var menuLineWidth = {
+        'brand' : '42px',
+        'menu' : '42px',
+        'benefit' : '52px',
+        'store' : '38px',
+        'customer' : '68px'
+    }
+    $('.menu').mouseenter(function(){
+        $('.menu div').css('width', 0);
+
+        var id = $(this).attr('id');
+        var select = '#' + $(this).attr('id') + ' div';
+        $(select).css('width', menuLineWidth[id]);
+    });
+
+    $('.menu').mouseleave(function(){
+        $('.menu div').css('width', 0);
+    });
 
     var cnt = 0;
-    var title = ['Avocado', 'Black Label', 'Soft Cream'];
-    var title1 = ['Green Salad', 'Chef Edition', 'White Pasta'];
+    var title = ['Black Label', 'Red Tomato', 'Soft Cream'];
+    var title1 = ['Chef Edition', 'Cheese Pizza', 'Shrimp Pasta'];
     var line = ['210px', '205px', '200px'];
     var cont =[
-        '신선한 숲속의 버터 아보카도와 향긋하고 달콤한 과일 그리고 새콤한 라코타 치즈가 <br>만나 행복함을 드립니다. 지금 상세메뉴 버튼을 클릭해 보러 오세요.',
         '깊고 풍부한 풍미의 프로볼로네 치즈와 두툼하고 육즙이 가득한 블랙라벨 스테이크가 <br>만나 행복함을 드립니다. 지금 상세메뉴 버튼을 클릭해 보러 오세요.',
-        '부드럽고 담백한 화이트 크림 소스와 베이컨 파마산 치즈, 상큼한 바질 페스토가<br>만나 행복함을 드립니다. 지금 상세메뉴 버튼을 클릭해 보러 오세요.'
+        '빨갛고 싱싱한 자연산 토마토와 새콤한 라코타 치즈, 바질, 시금치, 버섯 등 야채들이 <br>만나 행복함을 드립니다. 지금 상세메뉴 버튼을 클릭해 보러 오세요.',
+        '부드럽고 담백한 화이트 크림 소스와 베이컨 파마산 치즈, 신선하고 살이 꽉찬 꽃 새우가<br>만나 행복함을 드립니다. 지금 상세메뉴 버튼을 클릭해 보러 오세요.'
     ];
-    $.slide = function(val){
-        $('#imgBox').animate({'margin-left': docWidth * -1}, 800 ,function(){
-            $('#imgBox img:first').appendTo('#imgBox');
-            $('#imgBox').css('margin-left','0');
-        });
 
-        cnt++;
-        if(cnt > 2) cnt = 0; 
+    var timeLoopHeader;
+    $.slide = function(page, val){
+        if(page) cnt = (val - 1);
+        else cnt = (cnt > 2) ?  0 : cnt; 
+
+        var slideNum = (page) ? (val - 1) * -1 : (cnt * -1);
+        var margin = docWidth * slideNum;
+        $('#imgBox').stop().animate({'margin-left': margin}, 1000 ,function(){});
 
         $('#pageNum li').removeClass();
         $('#pageNum li').eq(cnt).addClass('numOn');
@@ -43,9 +60,19 @@ $(document).ready(function(){
 
         $(".changeTitle").letterfx({"fx":"fly-right","backwards":false,"timing":100,"fx_duration":"1200ms","letter_end":"stay","element_end":"stay"});
         $(".changeTitle2").letterfx({"fx":"wave","fx_duration":"500ms","letter_end":"rewind","element_end":"stay"});
+  
+        cnt++;
+        timeLoopHeader = setTimeout(function(){$.slide();}, 5000);
     }
-    setInterval(function(){ $.slide(); },4000);
+    $.slide();
     
+    $('#pageNum li').on('click', function(){
+        var index = $(this).index() + 1;
+        var className = '.headImg' + index;
+        var imgIndex = $(className).index() + 1;
+        clearTimeout(timeLoopHeader);
+        $.slide('pageClick', imgIndex);
+    });
 
     var cnt2 = 0;
     var title2 = ['Ashley Red', 'Basil Pesto', 'Pork Steak'];
@@ -54,10 +81,13 @@ $(document).ready(function(){
         '화이트 크림과 바질 페스토 브리 치즈가 만나 풍부한 맛이 가득한 크림 파스타로<br>애슐리에서 인기 만점 파스타 입니다. 꼭 오셔서 드셔보세요.',
         '에슐리 만의 특제 소스와 돼지 목살이 더해진 부드러운 포크 스테이크<br>애슐리 스테이크 메뉴 중 가장 추천드리는 스테이크 입니다. 지금 즐겨보세요.'
     ];
-    $.slide2 = function(){
+
+    var timeLoop1; 
+    $.slide2 = function(page, val){
         localStorage.setItem('slideEvt', 'on');
         
-        if(cnt2 > 2) cnt2 = 0; 
+        if(page) cnt2 = (val - 1);
+        else cnt2 = (cnt2 > 2) ?  0 : cnt2; 
 
         $('#bSlide img').fadeOut('slow');
         $('#bSlide img').eq(cnt2).fadeIn('slow');
@@ -70,12 +100,19 @@ $(document).ready(function(){
         $(".bMenu").letterfx({"fx":"fade","backwards":false,"timing":100,"fx_duration":"1000ms","letter_end":"stay","element_end":"stay"});
 
         cnt2++;
-
-        var timeLoop = setTimeout(function(){$.slide2()}, 3000);
+        timeLoop1 = setTimeout(function(){$.slide2()}, 3000);
     }
 
+    $('.circle').on('click', function(){
+        var index = $(this).index() + 1;
+        var className = '.bImg' + index;
+        var imgIndex = $(className).index() + 1;
+        clearTimeout(timeLoop1);
+        $.slide2('circle', imgIndex);
+    });
+
     var cnt3 = 0;
-    $.slide3 = function(val){
+    $.slide3 = function(){
         $('.conceptInfo p:first-child').removeClass('on1');
         $('.conceptInfo h3').removeClass('on2');
         $('.conceptInfo p:last-child').removeClass('on3');
@@ -98,39 +135,16 @@ $(document).ready(function(){
 
         var timeLoop = setTimeout(function(){$.slide3()}, 4000);
     }
-    
-    $('#sideBt').on('click', function(){
-        if($('#sideBt').css('right') == "-100px") {
-            $.homesOpen();
+
+    $('.slideL, .numberAbox').on('click', function(){
+        var type = $(this).data('concept');
+        if(type == 'classic') {
+            location.href = 'menu.html?concept='+type;
         } else {
-            $.homesClose();
+            alert('Classic외 컨셉은 준비중입니다.');
         }
     });
-
-    $.homesOpen = function(){
-        $('#sideBt').animate({'right': '0'}, 800);
-        $('.openBt').html('CLOSE');
-
-        $('#topBt').animate({opacity:0}, 1000);
-    }
-    $.homesClose = function(){
-        $('#sideBt').animate({'right': '-100px'}, 800);
-        $('.openBt').html('OPEN');
-        
-        $('#topBt').animate({opacity:1}, 1000);
-    }
-
-    $('#sideBox').on('click', function(e){
-        e.preventDefault();
-        window.open('https://www.homestaurant.co.kr/');
-    });
-
-    // scroll top button
-    $('#topBt').on('click', function(){
-        $('html, body').animate({scrollTop : 0}, 600);
-        return false;
-    });
-
+    
     $.textAni = function(){
         localStorage.setItem('textAni', 'on');
         $(".cTitle").letterfx({"fx":"fade","backwards":false,"timing":100,"fx_duration":"1000ms","letter_end":"stay","element_end":"stay"});
@@ -197,14 +211,6 @@ $(document).ready(function(){
     $(window).scroll(function(){
         var scrollT = $(this).scrollTop();
 
-        // if(scrollT == 0) {
-        //     $('#topBox').removeClass();
-        //     $('.menu:last-child a').css('color', '#212529');
-        // } else {
-        //     $('#topBox').addClass('menuScroll');
-        //     $('.menu:last-child a').css('color', '#fff');
-        // }
-
         // 모바일 화면 (480) 보다 클때 
         if(docWidth > 480){
             if(scrollT >= 100) { 
@@ -263,8 +269,11 @@ $(document).ready(function(){
             }
     
             // section D scroll evt
-            if(scrollT >= dSec - minusNum) {
+            if(scrollT >= dSec - minusNum && scrollT < fSec - minusNum) {
                 $("#dTitle").stop().fadeIn(800);
+                $("#movie1").get(0).play();
+            } else {
+                $("#movie1").get(0).pause();
             }
     
             // section F scroll evt
@@ -273,31 +282,27 @@ $(document).ready(function(){
             }
     
             // section h scroll evt
-            if(scrollT >= hSec - minusNum) {
+            if(scrollT >= hSec - minusNum && scrollT < iSec - minusNum) {
                 $('.brandInfo p:first-child, .brandText').animate({opacity:1});
                 $('.brandTitle').animate({opacity:1});
                 var textAni4 = localStorage.getItem('textAni4');
                 if(textAni4 != 'on') $.textAni4();
+                $("#movie2").get(0).play();
+            } else {
+                $("#movie2").get(0).pause();
             }
     
             // section i scroll evt
             if(scrollT >= iSec - minusNum) {
                 $('#iImgBox').animate({'margin-left':'0px'}, 1000, function(){
-                    $('.iText').animate({opacity:1});
+                    $('.iText, .iText2').animate({opacity:1});
                     $('.iTitle').animate({opacity:1});
                     var textAni5 = localStorage.getItem('textAni5');
                     if(textAni5 != 'on') $.textAni5();
                 });
             }
         }
-
-
-
-
-
-
-        //var info = $('.info').offset().top + 500; 
-
+        
         // 모바일 화면 (480) 보다 작을때 
         if(docWidth <= 480){
             if(scrollT >= 100) { 
@@ -358,8 +363,12 @@ $(document).ready(function(){
             }
     
             // section D scroll evt
-            if(scrollT >= dSec - minusNumMidea) {
+           
+            if(scrollT >= dSec - minusNumMidea && scrollT < fSec - minusNumMidea) {
                 $("#dTitle").stop().fadeIn(800);
+                $("#movie1").get(0).play();
+            } else {
+                $("#movie1").get(0).pause();
             }
     
             // section F scroll evt
@@ -368,17 +377,20 @@ $(document).ready(function(){
             }
     
             // section h scroll evt
-            if(scrollT >= hSec - minusNumMidea) {
+            if(scrollT >= hSec - minusNumMidea && scrollT < iSec - minusNumMidea) {
                 $('.brandInfo p:first-child, .brandText').animate({opacity:1});
                 $('.brandTitle').animate({opacity:1});
                 var textAni4 = localStorage.getItem('textAni4');
                 if(textAni4 != 'on') $.textAni4('m');
+                $("#movie2").get(0).play();
+            } else {
+                $("#movie2").get(0).pause();
             }
     
             // section i scroll evt
             if(scrollT >= iSec - minusNumMidea) {
                 $('#iImgBox').animate({'margin-left':'0px'}, 1000, function(){
-                    $('.iText').animate({opacity:1});
+                    $('.iText, .iMtext').animate({opacity:1});
                     $('.iTitle').animate({opacity:1});
                     var textAni5 = localStorage.getItem('textAni5');
                     if(textAni5 != 'on') $.textAni5();
@@ -387,9 +399,7 @@ $(document).ready(function(){
         }
 
     });
-
     
-
 });
 
 window.onload = function () {
