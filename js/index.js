@@ -5,7 +5,7 @@ $(document).ready(function(){
     $('#shadow img').width(docWidth);
 
     $( window ).resize( function() {
-        var docWidth = $('html,body').width();
+        docWidth = $('html,body').width();
         $('#imgBox img').width(docWidth);
         $('#shadow img').width(docWidth);
     });
@@ -331,16 +331,12 @@ window.onload = function () {
     $(".changeTitle").letterfx({"fx":"fly-right","backwards":false,"timing":100,"fx_duration":"1200ms","letter_end":"stay","element_end":"stay"});
     $(".changeTitle2").letterfx({"fx":"wave","fx_duration":"500ms","letter_end":"rewind","element_end":"stay"});
 
-    // 모바일 화면 (480) 보다 작을때 
-    var docWidth2 = $('html,body').width();
-    if(docWidth2 <= 480){
-        $("#mediaTitle p:first-child").letterfx({"fx":"fade","backwards":false,"timing":100,"fx_duration":"1000ms","letter_end":"stay","element_end":"stay"});
-        $("#mediaTitle p:first-child").animate({opacity:1}, 1000, function(){
-            $("#mediaTitle p:nth-child(2)").letterfx({"fx":"fade","backwards":false,"timing":100,"fx_duration":"1000ms","letter_end":"stay","element_end":"stay"});
-            $("#mediaTitle p:nth-child(2)").animate({opacity:1}, 1000, function(){
-                $("#mediaTitle p:nth-child(3)").animate({opacity:1});
-                $("#mediaTitle p:nth-child(3)").letterfx({"fx":"fly-top","backwards":false,"timing":100,"fx_duration":"1000ms","letter_end":"stay","element_end":"stay"});
-            });
+    $("#mediaTitle p:first-child").letterfx({"fx":"fade","backwards":false,"timing":100,"fx_duration":"1000ms","letter_end":"stay","element_end":"stay"});
+    $("#mediaTitle p:first-child").animate({opacity:1}, 1000, function(){
+        $("#mediaTitle p:nth-child(2)").letterfx({"fx":"fade","backwards":false,"timing":100,"fx_duration":"1000ms","letter_end":"stay","element_end":"stay"});
+        $("#mediaTitle p:nth-child(2)").animate({opacity:1}, 1000, function(){
+            $("#mediaTitle p:nth-child(3)").animate({opacity:1});
+            $("#mediaTitle p:nth-child(3)").letterfx({"fx":"fly-top","backwards":false,"timing":100,"fx_duration":"1000ms","letter_end":"stay","element_end":"stay"});
         });
-    }
+    });
 }
