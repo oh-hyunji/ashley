@@ -200,18 +200,19 @@ $(document).ready(function(){
         $(".iTitle").letterfx({"fx":"fly-bottom","backwards":false,"timing":100,"fx_duration":"1000ms","letter_end":"stay","element_end":"stay"});
     }
 
-    var aSec = $('#aSec').position().top; 
-    var bSec = $('#bSec').position().top; 
-    var cSec = $('#cSec').position().top; 
-    var dSec = $('#dSec').position().top; 
-    var eSec = $('#eSec').position().top; 
-    var fSec = $('#fSec').position().top; 
-    var gSec = $('#gSec').position().top; 
-    var hSec = $('#hSec').position().top; 
-    var iSec = $('#iSec').position().top; 
-
+    
     var minusNum = 300;
     var minusNum2 = 200;
+
+    var aSec = $('#aSec').offset().top - minusNum; 
+    var bSec = $('#bSec').offset().top - minusNum; 
+    var cSec = $('#cSec').offset().top - minusNum; 
+    var dSec = $('#dSec').offset().top - minusNum2; 
+    var eSec = $('#eSec').offset().top - minusNum; 
+    var fSec = $('#fSec').offset().top - minusNum2; 
+    var gSec = $('#gSec').offset().top - minusNum; 
+    var hSec = $('#hSec').offset().top - minusNum2; 
+    var iSec = $('#iSec').offset().top - minusNum; 
    
     var aniTime = 1000;
     var aniTime8 = 800;
@@ -234,7 +235,7 @@ $(document).ready(function(){
         }
 
         // section A scroll evt - concept
-        if(scrollT >= aSec - minusNum) {
+        if(scrollT >= aSec) {
             if(docWidth > 480) {
                 var textAni1 = (aniEvt.indexOf('textAni1') >= 0) ? 'on' : '';
                 if(textAni1 != 'on') $.textAni1();
@@ -244,7 +245,7 @@ $(document).ready(function(){
         }
 
         // section B scroll evt - magagin
-        if(scrollT >= bSec - minusNum) {
+        if(scrollT >= bSec) {
             $('#bTitle').animate({opacity:1}, 1000);
 
             var slideEvt = (aniEvt.indexOf('slideEvt') >= 0) ? 'on' : '';
@@ -252,7 +253,7 @@ $(document).ready(function(){
         }
 
         // section C scroll evt - art food
-        if(scrollT >= cSec - minusNum) {
+        if(scrollT >= cSec) {
             $('#cImgBox img').addClass('imgScale');
 
             var textAni = (aniEvt.indexOf('textAni') >= 0) ? 'on' : '';
@@ -267,7 +268,7 @@ $(document).ready(function(){
         }
 
         // section E scroll evt - home staurant
-        if(scrollT >= eSec - minusNum) {
+        if(scrollT >= eSec) {
             $('.eText').stop().fadeIn(1000);
             
             var textAni2 = (aniEvt.indexOf('textAni2') >= 0) ? 'on' : '';
@@ -275,7 +276,7 @@ $(document).ready(function(){
         }
 
         // section G scroll evt - special wine
-        if(scrollT >= gSec - minusNum) {
+        if(scrollT >= gSec) {
             $('#gImgBox img').addClass('imgRotate');
             
             var textAni3 = (aniEvt.indexOf('textAni3') >= 0) ? 'on' : '';
@@ -290,17 +291,17 @@ $(document).ready(function(){
         }
 
         // section D scroll evt - grill & salad movie
-        if(scrollT >= dSec - minusNum2) {
+        if(scrollT >= dSec) {
             $("#dTitle").animate({opacity:1}, aniTime);
         }
 
         // section F scroll evt - evt & notice
-        if(scrollT >= fSec - minusNum2) {
+        if(scrollT >= fSec) {
             $(".fIcon").animate({opacity:1}, aniTime);
         }
 
         // section h scroll evt - brand story
-        if(scrollT >= hSec - minusNum2) {
+        if(scrollT >= hSec) {
             $('.brandInfo p:first-child, .brandText').animate({opacity:1});
             $('.brandTitle').animate({opacity:1});
 
@@ -310,7 +311,7 @@ $(document).ready(function(){
         }
 
         // section i scroll evt - search map
-        if(scrollT >= iSec - minusNum) {
+        if(scrollT >= iSec) {
             $('#iImgBox').animate({'margin-left':'0px'}, aniTime, function(){
                 $('.iText').animate({opacity:1}, aniTime8, function(){
                     var textAni5 = (aniEvt.indexOf('textAni5') >= 0) ? 'on' : '';

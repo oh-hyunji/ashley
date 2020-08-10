@@ -6,6 +6,8 @@ $(document).ready(function(){
     $( window ).resize( function() {
         docWidth = $('html,body').width();
         $('#header').width(docWidth);
+
+        if(docWidth <= 480) $('.dTextBox').addClass('fontOn');
     });
 
     var menuLineWidth = {
@@ -58,15 +60,7 @@ $(document).ready(function(){
     });
 
 
-    var aSec = $('#aSec').offset().top; 
-    var bSec = $('#bSec').offset().top; 
-    var cSec = $('#cSec').offset().top; 
-    var dSec = $('#dSec').offset().top; 
-    var eSec = $('#eSec').offset().top; 
-    var fSec = $('#fSec').position().top; 
-    var gSec = $('#gSec').offset().top; 
 
-    var minusNum = 300;
 
     $.textAni = function(){
         aniEvtMenu.push('textAni');
@@ -140,6 +134,16 @@ $(document).ready(function(){
         var timeLoop = setTimeout(function(){$.slide()}, 4000);
     }
     
+    var minusNum = 300;
+
+    var aSec = $('#aSec').offset().top - minusNum; 
+    var bSec = $('#bSec').offset().top - minusNum; 
+    var cSec = $('#cSec').offset().top - minusNum; 
+    var dSec = $('#dSec').offset().top - minusNum; 
+    var eSec = $('#eSec').offset().top - minusNum; 
+    var fSec = $('#fSec').offset().top - minusNum; 
+    var gSec = $('#gSec').offset().top - minusNum; 
+
     $(window).scroll(function(){
         var scrollT = $(window).scrollTop();
 
@@ -163,13 +167,13 @@ $(document).ready(function(){
         }
 
         // section A scroll evt - steak
-        if(scrollT >= aSec - minusNum) {
+        if(scrollT >= aSec) {
             var textAni = (aniEvtMenu.indexOf('textAni') >= 0) ? 'on' : '';
             if(textAni != 'on') $.textAni();
         }
 
         // section B scroll evt - food 6
-        if(scrollT >= bSec - minusNum) {
+        if(scrollT >= bSec) {
             var aniTime = 800;
 
             $('.bBox:first-child .food1 img').animate({opacity:1}, aniTime, function(){
@@ -186,24 +190,24 @@ $(document).ready(function(){
         }
 
         // section C scroll evt - cake
-        if(scrollT >= cSec - minusNum) {
+        if(scrollT >= cSec) {
             var textAni2 = (aniEvtMenu.indexOf('textAni2') >= 0) ? 'on' : '';
             if(textAni2 != 'on') $.textAni2();
         }
 
         // section D scroll evt - dessert
-        if(scrollT >= dSec - minusNum) {
+        if(scrollT >= dSec) {
             var textAni1 = (aniEvtMenu.indexOf('textAni1') >= 0) ? 'on' : '';
             if(textAni1 != 'on') $.textAni1();
         }
 
         // section E scroll evt - drink
-        if(scrollT >= eSec - minusNum) {
+        if(scrollT >= eSec) {
             $('.eTitle h1').animate({opacity:1}, 1000);
         }
 
         // section F scroll evt - wine
-        if(scrollT >= fSec - minusNum) {
+        if(scrollT >= fSec) {
             $('.fBox p:first-child').animate({opacity:1}, 600, function(){
                 $('.fBox p:last-child').animate({opacity:1}, 600, function(){
                     $('.evtBox').animate({opacity:1}, 1000, function(){
@@ -217,7 +221,7 @@ $(document).ready(function(){
         }
 
         // section G scroll evt - ade
-        if(scrollT >= gSec - minusNum) {
+        if(scrollT >= gSec) {
             $('.gBox p:first-child').animate({opacity:1}, 600, function(){
                 $('.gBox p:last-child').animate({opacity:1}, 600, function(){
                     $('.gImg img').animate({'margin-left':0}, 1000, function(){
@@ -228,17 +232,6 @@ $(document).ready(function(){
         }
 
     });
-
-
-
-
     
 });
 
-window.onload = function () {
-    // 모바일 화면 (480) 보다 작을때 
-    var docWidth2 = $('html,body').width();
-    if(docWidth2 <= 480){
-        $('.dTextBox').addClass('fontOn');
-    }
-}
