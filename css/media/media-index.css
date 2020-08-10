@@ -331,7 +331,7 @@
         margin-top: -12px;
     }
     .cText {
-        display: none !important;
+        display: none;
     }
 
     .cMediaText {
@@ -339,6 +339,7 @@
         padding-top: 4px;
         color: #929292;
         font-size: .8rem;
+        opacity: 0;
     }
     .cBt {
         margin-top: 20px;
@@ -383,13 +384,14 @@
         margin-top: -12px;
     }
     .gText {
-        display: none !important;
+        display: none;
     }
     .gMediaText {
         display: block;
         padding-top: 4px;
         color: #929292;
         font-size: .8rem;
+        opacity: 0;
     }
     .gBt {
         margin-top: 20px;

@@ -90,7 +90,7 @@
 
     #aBox {
         flex-direction: column-reverse;
-        padding: 10px 0 100px;
+        padding: 0 0 100px;
     }
     #aImgBox {
         width: 100%;
@@ -138,6 +138,7 @@
 
     #cBox {
         padding: 80px 0 100px;
+        border-top: 1px solid #c5c5c5;
     }
     #cImgBox {
         width: 100%;
@@ -172,9 +173,10 @@
     .dTitle h1 {
         font-size: 4rem;
     }
-    .slideL {
-        width: 52px;
+    .dLine {
+        display: none;
     }
+ 
     .dImgBox {
         width: 100%;
         overflow: unset;

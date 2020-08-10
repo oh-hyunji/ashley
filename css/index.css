@@ -260,10 +260,10 @@
 }
 #bSlide img {
     height: 100%;
-    width: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 #bSlide img {
     display: none;
@@ -326,7 +326,7 @@
     margin-top: -25px;
 }
 .cText {
-    display: none;
+    opacity: 0;
     padding-top: 6px;
     color: #929292;
     font-size: .96rem;
@@ -521,7 +521,7 @@
     margin-top: -25px;
 }
 .gText {
-    display: none;
+    opacity: 0;
     padding-top: 6px;
     color: #929292;
     font-size: .96rem;
@@ -550,10 +550,8 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: rgba(255, 255, 255, .6);
-    display: none;
-}
-#dTitle p {
-    font-size: .96rem;
+    display: block;
+    opacity: 0;
 }
 #dTitle h1 {
     font-size: 2.2rem;

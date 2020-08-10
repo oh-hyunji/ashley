@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no, address=no, email=no" />
     <title>Ashley</title>
+
      <!-- stylesheet -->
-     <link rel="stylesheet" href="./css/plug/animate.css">
      <link rel="stylesheet" href="./css/plug/jquery-letterfx.min.css">
      <link rel="stylesheet" href="./css/style.css">
      <link rel="stylesheet" href="./css/index.css">
@@ -300,11 +300,10 @@
 
     <section id="dSec">
         <div id="dTitle">
-            <!-- <p>Ashley</p> -->
             <h1>American Grill & Salad</h1>
         </div>
         <div id="video">
-            <video id="movie1" class="movie" loop muted playsinline> 
+            <video id="movie1" class="movie" autoplay loop muted playsinline> 
                 <source src="./images/video.mp4" type="video/mp4"> 
              </video>
         </div>
@@ -399,7 +398,7 @@
     </section>
     <!-- people walking back movie -->
     <div id="backVideo">
-        <video id="movie2" class="movie" loop muted playsinline> 
+        <video id="movie2" class="movie" autoplay loop muted playsinline> 
             <source src="./images/video5.mp4" type="video/mp4"> 
         </video>
     </div>
@@ -457,8 +456,6 @@
             </div>
         </div>
     </footer>
-    
-   
 
     <!-- homestaurant side button -->
     <div id="sideBt">
@@ -492,7 +489,47 @@
             </ul>
         </div>
     </div>
-   
+
+    <!-- login layer -->
+    <div id="popLogin">
+        <div class="loginBox">
+            <p class="lClose"><i class="xi-close"></i></p>
+            <div class="lImgBox">
+                <div class="lLogo">
+                    <div class="lTextBox">
+                        <p class="hoonTop">Ashley</p>
+                        <p>Grill & Salad</p>
+                    </div>
+                </div>
+                <img src="./images/login.jpg" alt="이미지">
+            </div>
+            <div class="lInputBox">
+                <div class="lInput">
+                    <p class="loginText">Login</p>
+                    <input type="text" class="lText" name="email" placeholder="아이디">
+                    <input type="password" class="lText" name="pass" placeholder="비밀번호">
+                    <div class="groupCheck">
+                        <div>
+                            <input type="checkbox" name="check" id="check" checked>
+                            <label for="check" class="han checkLog">자동 로그인</label>
+                        </div>
+                        <a href="#" class="han">아이디 / 비밀번호 찾기</a>
+                    </div>
+                    <button class="han loginBt"><i class="fas fa-power-off"></i>&nbsp;&nbsp;&nbsp;로그인</button>
+                    <p class="han regist">아직 회원이 아니신가요?&nbsp;&nbsp;<a href="#">회원가입 하기</a></p>
+                    
+                    <div class="socialLogin">
+                        <div class="sociLine"></div>
+                        <p>or</p>
+                        <a href="#"><img src="./images/social3.png" alt="이미지"></a>
+                        <a href="#"><img src="./images/social2.png" alt="이미지"></a>
+                        <a href="#"><img src="./images/social1.png" alt="이미지"></a>
+                        <a href="#"><img src="./images/social4.png" alt="이미지"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     
 </body>

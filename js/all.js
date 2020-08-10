@@ -33,15 +33,21 @@ $(document).ready(function(){
 
     $('#mSideBt').on('click', function(){
         $('#mobileNavi').css('display','flex');
-        $('html,body').css('overflow-y', 'hidden');
+        // $('html,body').css('overflow-y', 'hidden');
     });
 
     $('.moClose').on('click', function(){
         $('#mobileNavi').css('display','none');
-        $('html,body').css('overflow-y', 'auto');
+        // $('html,body').css('overflow-y', 'auto');
+    });
+
+    $('.lClose').on('click', function(){
+        $('#popLogin').css('display','none');
+        // $('html,body').css('overflow-y', 'auto');
     });
 
     $('#login').on('click', function(){
-        alert('로그인페이지 준비중..');
+        $('#popLogin').css('display','flex');
+        // $('html,body').css('overflow-y', 'hidden');
     });
 });

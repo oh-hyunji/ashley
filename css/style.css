@@ -50,7 +50,7 @@ p {margin: 0; padding: 0;}
 
 /* header - Img */
 #imgBox {
-    /* width: 300%; */
+    width: 300%;
     display: flex;
 }
 
@@ -410,4 +410,165 @@ p {margin: 0; padding: 0;}
 
 #mobileNavi {
     display: none;
+}
+
+#popLogin {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBox {
+    width: 800px;
+    height: 500px;
+    background: #fff;
+    position: relative;
+    display: flex;
+}
+.lClose {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 1.6rem;
+    color: #9e9e9e;
+    cursor: pointer;
+}
+.lImgBox {
+    position: relative;
+    width: 350px;
+    height: 100%;
+}
+.lImgBox img {
+    width: 100%;
+}
+
+.lLogo {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    height: 150px;
+    background: #788841;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lTextBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.lTextBox p:first-child {
+    font-size: 2rem;
+    color: #f8f9f4;
+}
+.lTextBox p:last-child {
+    font-size: .9rem;
+    color: #fbfdf1;
+    margin-top: -2px;
+}
+.lLogo a {
+    font-size: 1.6rem;
+    color: #445b17;
+}
+
+.lInputBox {
+    width: 450px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lInput {
+    width: 70%;
+}
+.loginText {
+    font-size: 1.8rem;
+    color: #445b17;
+    font-weight: 600;
+    padding-bottom: 25px;
+    text-align: center;
+}
+.lText {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #929292;
+    border-radius: 4px;
+    font-size: .8rem;
+}
+.lText::placeholder {
+    color: #757575;
+    font-size: .8rem;
+}
+.groupCheck{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+#check {
+    margin: 0;
+}
+.groupCheck a {
+    font-size: .8rem;
+    color: #333;
+    align-items: center;
+}
+.checkLog {
+    font-size: .8rem;
+    color: #333;
+    cursor: pointer;
+}
+.loginBt {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    background: #445b17;
+    color: #f8f9f4;
+    font-size: .9rem;
+}
+.regist {
+    text-align: center;
+    padding: 20px 0 10px;
+    font-size: .9rem;
+    color: #616161;
+}
+.regist a {
+    color: #445b17;
+}
+.socialLogin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+.sociLine {
+    width: 100%;
+    height: 1px;
+    background: #9e9e9e;
+    margin: 15px;
+}
+.socialLogin p {
+    position: absolute;
+    top: 5px;
+    background: #fff;
+    width: 60px;
+    text-align: center;
+    color: #929292;
+    font-size: .8rem;
+}
+.socialLogin img {
+    width: 50px;
 }

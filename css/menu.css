@@ -418,19 +418,13 @@
     border-top: 1px solid #c5c5c5;
 }
 .dTitleBox {
-    /* width: 25%; */
     width: 28%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    /* border-top-right-radius: 35%;
-    border-bottom-right-radius: 35%;
-    background: #788841; */
 }
 .dTitle h1 {
-    /* font-size: 2.8rem;
-    color: #f8f9f4; */
     opacity: 0;
     font-size: 5.23rem;
     color: #333;

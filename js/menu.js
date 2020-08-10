@@ -1,9 +1,9 @@
 $(document).ready(function(){
+    var aniEvtMenu = [];
     var docWidth = $('html,body').width();
     $('#header').width(docWidth);
 
     $( window ).resize( function() {
-        localStorage.clear(); 
         docWidth = $('html,body').width();
         $('#header').width(docWidth);
     });
@@ -63,13 +63,13 @@ $(document).ready(function(){
     var cSec = $('#cSec').offset().top; 
     var dSec = $('#dSec').offset().top; 
     var eSec = $('#eSec').offset().top; 
-    var fSec = $('#fSec').offset().top; 
+    var fSec = $('#fSec').position().top; 
     var gSec = $('#gSec').offset().top; 
-    var minusNum = 500;
-    var minusNumMidea = 300;
+
+    var minusNum = 300;
 
     $.textAni = function(){
-        localStorage.setItem('textAni', 'on');
+        aniEvtMenu.push('textAni');
        
         $('#aImgBox').animate({opacity:1}, 1200);
         $('.aTitle').animate({opacity:1}, 1000);
@@ -86,7 +86,7 @@ $(document).ready(function(){
     }
 
     $.textAni1 = function(){
-        localStorage.setItem('textAni1', 'on');
+        aniEvtMenu.push('textAni1');
         
         setTimeout(function(){$.slide();},4000);
         
@@ -99,7 +99,7 @@ $(document).ready(function(){
     }
 
     $.textAni2 = function(){
-        localStorage.setItem('textAni2', 'on');
+        aniEvtMenu.push('textAni2');
 
         $('#cImgBox img').animate({'margin-left':0}, 1400);
         $('.cTitle').animate({opacity:1}, 1000);
@@ -141,7 +141,7 @@ $(document).ready(function(){
     }
     
     $(window).scroll(function(){
-        var scrollT = $(this).scrollTop();
+        var scrollT = $(window).scrollTop();
 
         if(docWidth <= 480){
             if(scrollT >= 100) { 
@@ -162,13 +162,13 @@ $(document).ready(function(){
             }
         }
 
-        // section A scroll evt
+        // section A scroll evt - steak
         if(scrollT >= aSec - minusNum) {
-            var textAni = localStorage.getItem('textAni');
+            var textAni = (aniEvtMenu.indexOf('textAni') >= 0) ? 'on' : '';
             if(textAni != 'on') $.textAni();
         }
 
-        // section B scroll evt
+        // section B scroll evt - food 6
         if(scrollT >= bSec - minusNum) {
             var aniTime = 800;
 
@@ -185,27 +185,24 @@ $(document).ready(function(){
             });
         }
 
-        // section C scroll evt
+        // section C scroll evt - cake
         if(scrollT >= cSec - minusNum) {
-            var textAni2 = localStorage.getItem('textAni2');
+            var textAni2 = (aniEvtMenu.indexOf('textAni2') >= 0) ? 'on' : '';
             if(textAni2 != 'on') $.textAni2();
         }
 
-        // section D scroll evt
+        // section D scroll evt - dessert
         if(scrollT >= dSec - minusNum) {
-            var textAni1 = localStorage.getItem('textAni1');
+            var textAni1 = (aniEvtMenu.indexOf('textAni1') >= 0) ? 'on' : '';
             if(textAni1 != 'on') $.textAni1();
         }
 
-        // section E scroll evt
-        if(scrollT >= eSec - minusNum && scrollT < fSec - minusNum) {
+        // section E scroll evt - drink
+        if(scrollT >= eSec - minusNum) {
             $('.eTitle h1').animate({opacity:1}, 1000);
-            $("#video").get(0).play();
-        } else {
-            $("#video").get(0).pause();
         }
 
-        // section F scroll evt
+        // section F scroll evt - wine
         if(scrollT >= fSec - minusNum) {
             $('.fBox p:first-child').animate({opacity:1}, 600, function(){
                 $('.fBox p:last-child').animate({opacity:1}, 600, function(){
@@ -219,7 +216,7 @@ $(document).ready(function(){
             });
         }
 
-        // section G scroll evt
+        // section G scroll evt - ade
         if(scrollT >= gSec - minusNum) {
             $('.gBox p:first-child').animate({opacity:1}, 600, function(){
                 $('.gBox p:last-child').animate({opacity:1}, 600, function(){
@@ -239,8 +236,6 @@ $(document).ready(function(){
 });
 
 window.onload = function () {
-    localStorage.clear(); 
-
     // 모바일 화면 (480) 보다 작을때 
     var docWidth2 = $('html,body').width();
     if(docWidth2 <= 480){
