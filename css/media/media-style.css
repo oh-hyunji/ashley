@@ -193,6 +193,33 @@
         color: #333 !important;
     }
 
+    #mobileLogin {
+        display: none;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+        background: #fff;
+        z-index: 30;
+        align-items: center;
+        justify-content: center;
+    }
+    .moLclose {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        font-size: 2rem;
+        color: #9e9e9e;
+        cursor: pointer;
+    }
+    #moLoBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
     
 
 }

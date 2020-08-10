@@ -525,7 +525,7 @@
                 <li class="moMenu"><span class="moNum">03.&nbsp;&nbsp;</span><a href="#" class="hoonTop">Benefit</a>&nbsp;&nbsp;&nbsp;<span class="han">제휴 카드</span></li>
                 <li class="moMenu"><span class="moNum">04.&nbsp;&nbsp;</span><a href="#" class="hoonTop">Store</a>&nbsp;&nbsp;&nbsp;<span class="han">매장 위치</span></li>
                 <li class="moMenu"><span class="moNum">05.&nbsp;&nbsp;</span><a href="#" class="hoonTop">Customer</a>&nbsp;&nbsp;&nbsp;<span class="han">고객 센터</span></li>
-                <li class="moMenu"><span class="moNum">etc.&nbsp;&nbsp;</span><a href="#" class="hoonTop">Login</a>&nbsp;&nbsp;&nbsp;<span class="han">로그인</span></li>
+                <li class="moMenu"><span class="moNum">etc.&nbsp;&nbsp;</span><a href="javascript:void(0);" onclick="$.moLogin();" class="hoonTop">Login</a>&nbsp;&nbsp;&nbsp;<span class="han">로그인</span></li>
             </ul>
         </div>
     </div>
@@ -536,7 +536,7 @@
             <p class="lClose"><i class="xi-close"></i></p>
             <div class="lImgBox">
                 <div class="lLogo">
-                    <div class="lTextBox">
+                    <div class="lTextBox" onclick="location.href='./index.html';">
                         <p class="hoonTop">Ashley</p>
                         <p>Grill & Salad</p>
                     </div>
@@ -545,13 +545,49 @@
             </div>
             <div class="lInputBox">
                 <div class="lInput">
-                    <p class="loginText">Login</p>
+                    <p class="loginText hoonTop">Login</p>
                     <input type="text" class="lText" name="email" placeholder="아이디">
                     <input type="password" class="lText" name="pass" placeholder="비밀번호">
                     <div class="groupCheck">
                         <div>
                             <input type="checkbox" name="check" id="check" checked>
                             <label for="check" class="han checkLog">자동 로그인</label>
+                        </div>
+                        <a href="#" class="han">아이디 / 비밀번호 찾기</a>
+                    </div>
+                    <button class="han loginBt"><i class="fas fa-power-off"></i>&nbsp;&nbsp;&nbsp;로그인</button>
+                    <p class="han regist">아직 회원이 아니신가요?&nbsp;&nbsp;<a href="#">회원가입 하기</a></p>
+                    
+                    <div class="socialLogin">
+                        <div class="sociLine"></div>
+                        <p>or</p>
+                        <a href="#"><img src="./images/social3.png" alt="이미지"></a>
+                        <a href="#"><img src="./images/social2.png" alt="이미지"></a>
+                        <a href="#"><img src="./images/social1.png" alt="이미지"></a>
+                        <a href="#"><img src="./images/social4.png" alt="이미지"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile login -->
+    <div id="mobileLogin">
+        <div id="moLoBox">
+            <p class="moLclose"><i class="xi-close"></i></p>
+            <div class="moTop">
+                <div class="moLogo">
+                    <a href="./index.html" class="hoonTop">Ashley</a>
+                </div>
+            </div>
+            <div class="lInputBox">
+                <div class="lInput">
+                    <input type="text" class="lText" name="email" placeholder="아이디">
+                    <input type="password" class="lText" name="pass" placeholder="비밀번호">
+                    <div class="groupCheck">
+                        <div>
+                            <input type="checkbox" name="check" id="check2" checked>
+                            <label for="check2" class="han checkLog">자동 로그인</label>
                         </div>
                         <a href="#" class="han">아이디 / 비밀번호 찾기</a>
                     </div>

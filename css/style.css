@@ -412,6 +412,10 @@ p {margin: 0; padding: 0;}
     display: none;
 }
 
+#mobileLogin {
+    display: none;
+}
+
 #popLogin {
     width: 100%;
     height: 100%;
@@ -436,7 +440,7 @@ p {margin: 0; padding: 0;}
     position: absolute;
     top: 25px;
     right: 25px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     color: #9e9e9e;
     cursor: pointer;
 }
@@ -466,6 +470,7 @@ p {margin: 0; padding: 0;}
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .lTextBox p:first-child {
     font-size: 2rem;
@@ -474,7 +479,7 @@ p {margin: 0; padding: 0;}
 .lTextBox p:last-child {
     font-size: .9rem;
     color: #fbfdf1;
-    margin-top: -2px;
+    margin-top: -3px;
 }
 .lLogo a {
     font-size: 1.6rem;
@@ -492,7 +497,7 @@ p {margin: 0; padding: 0;}
     width: 70%;
 }
 .loginText {
-    font-size: 1.8rem;
+    font-size: 2.3rem;
     color: #445b17;
     font-weight: 600;
     padding-bottom: 25px;
@@ -540,11 +545,12 @@ p {margin: 0; padding: 0;}
 .regist {
     text-align: center;
     padding: 20px 0 10px;
-    font-size: .9rem;
+    font-size: .8rem;
     color: #616161;
 }
 .regist a {
     color: #445b17;
+    font-weight: 500;
 }
 .socialLogin {
     width: 100%;
@@ -571,4 +577,5 @@ p {margin: 0; padding: 0;}
 }
 .socialLogin img {
     width: 50px;
+    margin: 0px 1px;
 }

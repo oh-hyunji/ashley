@@ -33,21 +33,37 @@ $(document).ready(function(){
 
     $('#mSideBt').on('click', function(){
         $('#mobileNavi').css('display','flex');
-        // $('html,body').css('overflow-y', 'hidden');
+        $('html,body').css('overflow-y', 'hidden');
     });
 
     $('.moClose').on('click', function(){
         $('#mobileNavi').css('display','none');
-        // $('html,body').css('overflow-y', 'auto');
+        $('html,body').css('overflow-y', 'auto');
     });
 
     $('.lClose').on('click', function(){
         $('#popLogin').css('display','none');
-        // $('html,body').css('overflow-y', 'auto');
+        $('html,body').css('overflow-y', 'auto');
+        $('.lText').val('');
     });
 
     $('#login').on('click', function(){
         $('#popLogin').css('display','flex');
-        // $('html,body').css('overflow-y', 'hidden');
+        $('html,body').css('overflow-y', 'hidden');
     });
+
+    $.moLogin = function(){
+        $('.moClose').click();
+        $('#mobileLogin').css('display','flex');
+        $('html,body').css('overflow-y', 'hidden');
+        
+    }
+
+    $('.moLclose').on('click', function(){
+        $('#mobileLogin').css('display','none');
+        $('html,body').css('overflow-y', 'auto');
+        $('.lText').val('');
+    });
+
+
 });
