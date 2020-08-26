@@ -1,13 +1,14 @@
 $(document).ready(function(){
     var aniEvt = [];
     var docWidth = $('html,body').width();
-    $('#imgBox img').width(docWidth);
-    $('#shadow img').width(docWidth);
+    $('#header').width(docWidth);
 
     $( window ).resize( function() {
-        docWidth = $('html,body').width();
-        $('#imgBox img').width(docWidth);
-        $('#shadow img').width(docWidth);
+        var docWidth = $('html,body').width();
+        var imgHeight = $('#imgBox').height();
+        
+        $('#header').width(docWidth);
+        $('#header').height(imgHeight);
     });
 
     var menuLineWidth = {
@@ -140,9 +141,13 @@ $(document).ready(function(){
     }
 
     $('.slideL, .numberAbox').on('click', function(){
-        var type = $(this).data('concept');
-        if(type == 'classic') location.href = 'menu.html?concept='+type;
-        else alert('Classic외 컨셉은 준비중입니다.');
+        var concept = $(this).data('concept');
+        var type = (concept == 'grill') ? '83 ' + concept.replace(/^./, concept[0].toUpperCase()) : concept.replace(/^./, concept[0].toUpperCase());
+        var title = 'Concept ' + type;
+        var text = '메뉴로 이동 하시겠습니까?';
+        var etc = {'key' : 'concept', 'val' : concept};
+        
+        confirm.open(title, text, etc);
     });
     
     $.textAni = function(){
@@ -216,6 +221,7 @@ $(document).ready(function(){
    
     var aniTime = 1000;
     var aniTime8 = 800;
+    var mediaSize = 480;
 
     // window scroll event
     $(window).scroll(function(){
@@ -225,18 +231,18 @@ $(document).ready(function(){
             $('#topBt').fadeIn('slow');
             $('#topBt').css('display','flex');
 
-            if(docWidth <= 480) {
+            if(docWidth <= mediaSize) {
                 $('#sideBt').fadeIn('slow');
                 $('#sideBt').css('display','flex');
             }
         } else {
             $('#topBt').fadeOut('slow');
-            if(docWidth <= 480) $('#sideBt').fadeOut('slow');
+            if(docWidth <= mediaSize) $('#sideBt').fadeOut('slow');
         }
 
         // section A scroll evt - concept
-        if(scrollT >= aSec) {
-            if(docWidth > 480) {
+        if(scrollT >= aSec && scrollT < bSec) {
+            if(docWidth > mediaSize) {
                 var textAni1 = (aniEvt.indexOf('textAni1') >= 0) ? 'on' : '';
                 if(textAni1 != 'on') $.textAni1();
             } else {
@@ -245,7 +251,7 @@ $(document).ready(function(){
         }
 
         // section B scroll evt - magagin
-        if(scrollT >= bSec) {
+        if(scrollT >= bSec && scrollT < cSec) {
             $('#bTitle').animate({opacity:1}, 1000);
 
             var slideEvt = (aniEvt.indexOf('slideEvt') >= 0) ? 'on' : '';
@@ -253,7 +259,7 @@ $(document).ready(function(){
         }
 
         // section C scroll evt - art food
-        if(scrollT >= cSec) {
+        if(scrollT >= cSec && scrollT < eSec) {
             $('#cImgBox img').addClass('imgScale');
 
             var textAni = (aniEvt.indexOf('textAni') >= 0) ? 'on' : '';
@@ -261,14 +267,14 @@ $(document).ready(function(){
 
             $('.cTitle').animate({opacity:1}, aniTime, function(){
                 $('.cTitle2').animate({opacity:1}, aniTime, function(){
-                    if(docWidth > 480) $('.cText').animate({opacity:1}, aniTime);
+                    if(docWidth > mediaSize) $('.cText').animate({opacity:1}, aniTime);
                     else $('.cMediaText').animate({opacity:1}, aniTime);
                 });
             });
         }
 
         // section E scroll evt - home staurant
-        if(scrollT >= eSec) {
+        if(scrollT >= eSec && scrollT < gSec) {
             $('.eText').stop().fadeIn(1000);
             
             var textAni2 = (aniEvt.indexOf('textAni2') >= 0) ? 'on' : '';
@@ -276,7 +282,7 @@ $(document).ready(function(){
         }
 
         // section G scroll evt - special wine
-        if(scrollT >= gSec) {
+        if(scrollT >= gSec && scrollT < dSec) {
             $('#gImgBox img').addClass('imgRotate');
             
             var textAni3 = (aniEvt.indexOf('textAni3') >= 0) ? 'on' : '';
@@ -284,29 +290,29 @@ $(document).ready(function(){
 
             $('.gTitle').animate({opacity:1}, aniTime, function(){
                 $('.gTitle2').animate({opacity:1}, aniTime, function(){
-                    if(docWidth > 480) $('.gText').animate({opacity:1}, aniTime);
+                    if(docWidth > mediaSize) $('.gText').animate({opacity:1}, aniTime);
                     else $('.gMediaText').animate({opacity:1}, aniTime);
                 });
             });
         }
 
         // section D scroll evt - grill & salad movie
-        if(scrollT >= dSec) {
+        if(scrollT >= dSec && scrollT < fSec) {
             $("#dTitle").animate({opacity:1}, aniTime);
         }
 
         // section F scroll evt - evt & notice
-        if(scrollT >= fSec) {
+        if(scrollT >= fSec && scrollT < hSec) {
             $(".fIcon").animate({opacity:1}, aniTime);
         }
 
         // section h scroll evt - brand story
-        if(scrollT >= hSec) {
+        if(scrollT >= hSec && scrollT < iSec) {
             $('.brandInfo p:first-child, .brandText').animate({opacity:1});
             $('.brandTitle').animate({opacity:1});
 
             var textAni4 = (aniEvt.indexOf('textAni4') >= 0) ? 'on' : '';
-            var media = (docWidth > 480) ? '' : 'm';
+            var media = (docWidth > mediaSize) ? '' : 'm';
             if(textAni4 != 'on') $.textAni4(media);
         }
 
@@ -317,7 +323,7 @@ $(document).ready(function(){
                     var textAni5 = (aniEvt.indexOf('textAni5') >= 0) ? 'on' : '';
                     if(textAni5 != 'on') $.textAni5();
 
-                    var className = (docWidth > 480) ? '.iText2' : '.iMtext';
+                    var className = (docWidth > mediaSize) ? '.iText2' : '.iMtext';
                     $(className).animate({opacity:1}, aniTime8, function(){
                         $('.iTitle').animate({opacity:1});
                     });
@@ -329,6 +335,9 @@ $(document).ready(function(){
 });
 
 window.onload = function () {
+    var imgHeight = $('#imgBox').height();
+    $('#header').height(imgHeight);
+
     $(".changeTitle").letterfx({"fx":"fly-right","backwards":false,"timing":100,"fx_duration":"1200ms","letter_end":"stay","element_end":"stay"});
     $(".changeTitle2").letterfx({"fx":"wave","fx_duration":"500ms","letter_end":"rewind","element_end":"stay"});
 

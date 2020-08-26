@@ -5,17 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@700&display=swap');
 
 @font-face {
-    font-family: HoonTop; 
-    src: url('./font/HoonTop_Bold_italic.eot'); 
-    src: local(※), url('./font/HoonTop_Bold_italic.woff') format('woff') 
+    font-family: 'HoonTop'; 
+    font-display: fallback;
+    src: url('./font/HoonTop_Bold_italic.eot'),
+         url('./font/HoonTop_Bold_italic.woff') format('woff'),
+         url('./font/HoonTop_Bold_italic.ttf') format("truetype");
 }
 
 .hoonTop {
-    font-family:"HoonTop" !important;
-    font-style:normal;
-    /* -webkit-font-smoothing: antialiased;
-    -webkit-text-stroke-width: 0.2px;
-    -moz-osx-font-smoothing: grayscale; */
+    font-family: 'HoonTop' !important;
+    font-style: normal;
 }
 
 .han {font-family: 'Noto Sans KR', sans-serif; letter-spacing: -1px;}
@@ -23,7 +22,6 @@
 /* setting */
 * {box-sizing: border-box;}
 body {padding: 0; margin: 0; font-family: 'Noto Sans', sans-serif; overflow-x: hidden; font-size: 14px;} 
-/*  background: #f8f9f4; */
 button {outline: none;}
 h1, h2, h3, h4, h5, h6, p, ul {margin: 0; padding: 0;}
 ul {list-style: none;}
@@ -33,25 +31,24 @@ img {display: block;}
 p {margin: 0; padding: 0;}
 
 /* header */
-#header {
-    background: #fff;
-    position: relative;
-    overflow: hidden;
-}
-#mediaHeader {
-    display: none;
-}
+#header {position: relative; background: #fff; height: 660px;}
+#mediaHeader {display: none;}
+.over {overflow: hidden;}
 
 /* header - shadow */
-#shadow {
-    width: 100%;
-    position: absolute;
-}
+#shadow {width: 100%; position: absolute;}
+#shadow img {width: 100%;}
 
 /* header - Img */
 #imgBox {
     width: 300%;
     display: flex;
+}
+.headImgBox {
+    width: 100%;
+}
+.headImgBox img {
+    width: 100%;
 }
 
 /* header - menu & logo */
@@ -246,7 +243,7 @@ p {margin: 0; padding: 0;}
 }
 #footBox {
     width: 100%;
-    padding: 25px 20px 18px;
+    padding: 25px 20px;
 }
 #footTop {
     display: flex;
@@ -286,7 +283,7 @@ p {margin: 0; padding: 0;}
     font-weight: 100;
 }
 #endLogo {
-    margin-top: -8px;
+    margin-top: -14px;
 }
 #endLogo p {
     color: #fff;
@@ -315,7 +312,7 @@ p {margin: 0; padding: 0;}
 #social {
     display: flex;
     align-items: flex-end;
-    margin-top: -3px;
+    margin-top: -13px;
 }
 #social p {
     padding: 0 5px;
@@ -372,6 +369,7 @@ p {margin: 0; padding: 0;}
     padding: 5px;
     width: 100%;
     top: 100%;
+    right: 0;
 }
 
 #loginModal {
@@ -569,6 +567,8 @@ p {margin: 0; padding: 0;}
 .socialLogin p {
     position: absolute;
     top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
     background: #fff;
     width: 60px;
     text-align: center;
@@ -578,4 +578,97 @@ p {margin: 0; padding: 0;}
 .socialLogin img {
     width: 50px;
     margin: 0px 1px;
+}
+
+#imgModal {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#confirmModal {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
+.confirmBox {
+    width: 400px;
+    height: 225px;
+    background: #fff;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.confirmIcon {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.confirmIcon p {
+    font-size: 2rem;
+    color: #788841;
+}
+
+
+.confirmInfo {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 5px;
+}
+.confirmTextBox {
+    text-align: center;
+}
+.confirmText1 {
+    font-size: 1.83rem;
+    color: #333;
+    
+}
+.confirmText2 {
+    font-size: .9rem;
+    color: #757575;
+}
+.buttonBox {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.conBtStyle {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    color: #fff;
+    cursor: pointer;
+}
+.okBt {
+    background: #788841;
+}
+.cancleBt {
+    background: #babd9e;
 }

@@ -4,7 +4,6 @@
 
 #header {
     height: 600px;
-    overflow: unset;
 }
 .logo p {
     color: #788841;
@@ -56,7 +55,7 @@
     position: relative;
 }
 .change {
-    justify-content: start;
+    justify-content: flex-start;
 }
 .lineStyle {
     position: absolute;
@@ -71,10 +70,10 @@
     font-size: 1.2rem;
     font-weight: 500;
     width: 100%;
-    text-align: end;
+    text-align: right;
 }
 .change h2 {
-    text-align: start;
+    text-align: left;
 }
 .infoLine {
     border-top: 1px solid #e2ecbd;
@@ -89,7 +88,7 @@
 }
 .priceInfo p {
     color: #e2ecbd;
-    font-size: .83rem;
+    font-size: .8rem;
 }
 .saladPrice {
     font-size: 4rem !important;
@@ -116,7 +115,8 @@
     height: 94%;
 }
 #infoBoxLeft .movie {
-    height: 100%;
+    /* height: 100%; */
+    height: auto;
     position: absolute;
     top: 0;
     left: 50%;
@@ -287,11 +287,11 @@
 .bName {
     position: absolute;
     top: 100%;
-    left: 52%;
     margin-top: 50px;
-    transform: translateX(-52%);
+    width: 280px;
 }
 .bBox:first-child .bName {
+    left: 85px;
     margin-top: 40px;
 }
 .menuBox p, .bBox:last-child .menuBox p {
@@ -306,8 +306,7 @@
     margin-top: -2px;
 }
 .bBox:last-child .bName {
-    left: 48%;
-    transform: translateX(-48%);
+    right: 85px;
 }
 .bBox:first-child .menuBox:last-child {
     background: none;
@@ -324,15 +323,16 @@
     width: 365px;
     position: absolute;
     top: 0;
-    left: 0;
     z-index: 1;
+}
+.bBox:first-child .menuBox img {
+    left: 0;
 }
 .bBox:last-child {
     padding-top: 150px;
     padding-bottom: 80px;
     justify-content: flex-end;
 }
-
 .bBox:last-child .menuBox {
     display: flex;
     flex-direction: row-reverse;
@@ -340,9 +340,9 @@
 .bBox:last-child .menuBox:first-child {
     background: none;
 }
+
 .bBox:last-child .menuBox img {
     right: 0;
-    left: unset;
 }
 
 .roundRight {
@@ -779,9 +779,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .gNum {
     position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-size: 11rem;
     font-weight: 600;
     color: #f8f9f4;

@@ -167,13 +167,13 @@ $(document).ready(function(){
         }
 
         // section A scroll evt - steak
-        if(scrollT >= aSec) {
+        if(scrollT >= aSec && scrollT < bSec) {
             var textAni = (aniEvtMenu.indexOf('textAni') >= 0) ? 'on' : '';
             if(textAni != 'on') $.textAni();
         }
 
         // section B scroll evt - food 6
-        if(scrollT >= bSec) {
+        if(scrollT >= bSec && scrollT < cSec) {
             var aniTime = 800;
 
             $('.bBox:first-child .food1 img').animate({opacity:1}, aniTime, function(){
@@ -190,24 +190,24 @@ $(document).ready(function(){
         }
 
         // section C scroll evt - cake
-        if(scrollT >= cSec) {
+        if(scrollT >= cSec && scrollT < dSec) {
             var textAni2 = (aniEvtMenu.indexOf('textAni2') >= 0) ? 'on' : '';
             if(textAni2 != 'on') $.textAni2();
         }
 
         // section D scroll evt - dessert
-        if(scrollT >= dSec) {
+        if(scrollT >= dSec && scrollT < eSec) {
             var textAni1 = (aniEvtMenu.indexOf('textAni1') >= 0) ? 'on' : '';
             if(textAni1 != 'on') $.textAni1();
         }
 
         // section E scroll evt - drink
-        if(scrollT >= eSec) {
+        if(scrollT >= eSec && scrollT < fSec) {
             $('.eTitle h1').animate({opacity:1}, 1000);
         }
 
         // section F scroll evt - wine
-        if(scrollT >= fSec) {
+        if(scrollT >= fSec && scrollT < gSec) {
             $('.fBox p:first-child').animate({opacity:1}, 600, function(){
                 $('.fBox p:last-child').animate({opacity:1}, 600, function(){
                     $('.evtBox').animate({opacity:1}, 1000, function(){

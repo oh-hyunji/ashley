@@ -242,16 +242,12 @@
     display: none;
 }
 #moreBt {
-    /* margin-top: 30px;
-    padding: 14px 28px;
-    border-radius: 20px;
-    border: none;
-    color: #788841; */
     margin-top: 30px;
     border: none;
     color: #788841;
     padding: 14px 20px;
     font-size: .8rem;
+    background: #f8f9f4;
 }
 #bSlide {
     width: 60%;
@@ -448,12 +444,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 .fNum {
     position: absolute;
     font-size: 6rem;
     font-weight: 600;
     color: #f8f9f4;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .fTitle p:last-child {
     z-index: 1;
