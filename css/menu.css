@@ -1,823 +1,279 @@
 @charset "UTF-8";
 
 /* header */
+#header {height: 600px;}
+.logo p {color: #788841;}
+.loginIcon {color: #fff;}
 
-#header {
-    height: 600px;
-}
-.logo p {
-    color: #788841;
-}
-.loginIcon {
-    color: #fff;
-}
-#headerTitle {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 25%;
-}
-.headerLine {
-    width: 110px;
-    height: 5px;
-    background: #fff;
-    margin-left: 20px;
-}
-#infoBox {
-    width: 60%;
-    height: 100%;
-    background: #788841;
-    top: 0;
-    position: absolute;
-    border-top-left-radius: 20%;
-    border-bottom-right-radius: 20%;
-    right: 0;
-}
-.infoTitle {
-    position: relative;
-    width: 60%;
-    height: 100%;
-    float: right;
-    right: 5%;
-}
-.infoText {
-    position: absolute;
-    top: 60%;
-    transform: translateY(-60%);
-    width: 100%;
-    padding: 0 50px;
-}
-.priceInfo {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    position: relative;
-}
-.change {
-    justify-content: flex-start;
-}
-.lineStyle {
-    position: absolute;
-    width: 1px;
-    height: 198px;
-    background: #e2ecbd;
-    top: 0;
-    right: 70px;
-}
-.priceInfo h2 {
-    color: #fbfdf1;
-    font-size: 1.2rem;
-    font-weight: 500;
-    width: 100%;
-    text-align: right;
-}
-.change h2 {
-    text-align: left;
-}
-.infoLine {
-    border-top: 1px solid #e2ecbd;
-    padding-top: 20px;
-}
-.infoLine h2 {
-    margin-bottom: 2px;
-    font-size: 1rem;
-}
-.priceBox {
-    width: 50%;
-}
-.priceInfo p {
-    color: #e2ecbd;
-    font-size: .8rem;
-}
-.saladPrice {
-    font-size: 4rem !important;
-    font-weight: 600;
-    margin-top: -12px;
-}
-.priceHan {
-    font-size: 1.2rem;
-    padding-left: 5px;
-}
-.checkIcon {
-    font-size: 1.2rem;
-}
-#infoBoxLeft {
-    width: 60%;
-    top: 93px;
-    position: absolute;
-    display: flex;
-    overflow: hidden;
-    flex-wrap: wrap;
-    border-top-right-radius: 20%;
-    border-bottom-right-radius: 20%;
-    z-index: 1;
-    height: 94%;
-}
-#infoBoxLeft .movie {
-    /* height: 100%; */
-    height: auto;
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.leftTitle {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
-    text-align: center;
-    z-index: 1;
-}
-.leftTitle h1 {
-    font-size: 5.5rem;
-    color: #fbfdf1;
-}
-.leftTitle p {
-    font-size: 1.13rem;
-    font-weight: 600;
-    color: #eaecdf;
-    text-align: center;
-    margin-top: -15px;
-}
+#headerTitle {position: absolute; display: flex; justify-content: center; align-items: center; margin-right: 25%;}
+.headerLine {width: 110px; height: 5px; background: #fff; margin-left: 20px;}
+
+#infoBox {width: 60%; height: 100%; background: #788841; top: 0; position: absolute; border-top-left-radius: 20%; border-bottom-right-radius: 20%; right: 0;}
+.infoTitle {position: relative; width: 60%; height: 100%; float: right; right: 5%;}
+.infoText {position: absolute; top: 60%; transform: translateY(-60%); width: 100%; padding: 0 50px;}
+.priceInfo {display: flex; flex-wrap: wrap; justify-content: flex-end; position: relative;}
+.change {justify-content: flex-start;}
+.lineStyle {position: absolute; width: 1px; height: 198px; background: #e2ecbd; top: 0; right: 70px;}
+.priceInfo h2 {color: #fbfdf1; font-size: 1.2rem; font-weight: 500; width: 100%; text-align: right;}
+.change h2 {text-align: left;}
+.infoLine {border-top: 1px solid #e2ecbd; padding-top: 20px;}
+.infoLine h2 {margin-bottom: 2px; font-size: 1rem;}
+.priceBox {width: 50%;}
+.priceInfo p {color: #e2ecbd; font-size: .8rem;}
+.saladPrice {font-size: 4rem !important; font-weight: 600; margin-top: -12px;}
+.priceHan {font-size: 1.2rem; padding-left: 5px;}
+.checkIcon {font-size: 1.2rem;}
+
+#infoBoxLeft {width: 60%; top: 93px; position: absolute; display: flex; overflow: hidden; flex-wrap: wrap; border-top-right-radius: 20%; border-bottom-right-radius: 20%; z-index: 1; height: 94%;}
+#infoBoxLeft .movie {height: auto; position: absolute; top: 0; left: 50%; transform: translateX(-50%);}
+
+.leftTitle {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #fff; text-align: center; z-index: 1;}
+.leftTitle h1 {font-size: 5.5rem; color: #fbfdf1;}
+.leftTitle p {font-size: 1.13rem; font-weight: 600; color: #eaecdf; text-align: center; margin-top: -15px;}
 
 /* type menu */
-#typeMenu {
-    width: 100%;
-    height: 68px;
-    margin: -1px auto;
-    position: absolute;
-    bottom: 0;
-}
-#typeBox {
-    width: 100%;
-    height: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-#typeBox ul {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.tMenu {
-    width: 125px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    cursor: pointer;
-}
-#typeBox a {
-    color: #f8f9f4;
-    font-size: .9rem;
-}
-.typeLine {
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background: #d2dcb0;
-    bottom: 22px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+#typeMenu {width: 100%; height: 68px; margin: -1px auto; position: absolute; bottom: 0;}
+#typeBox {width: 100%; height: 100%; max-width: 1280px; margin: 0 auto; padding: 0 20px;}
+#typeBox ul {width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.tMenu {width: 125px; height: 100%; display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer;}
+#typeBox a {color: #f8f9f4; font-size: .9rem;}
+.typeLine {position: absolute; width: 0; height: 2px; background: #d2dcb0; bottom: 22px; left: 50%; transform: translateX(-50%);}
 
 /* section all class */
-.allBox {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1280px;
-    margin: 0 auto;
-}
+.allBox {position: relative; display: flex; align-items: center; flex-wrap: wrap; max-width: 1280px; margin: 0 auto;}
 
-/* section A */
-#aSec {
-    width: 100%;
-    background: #fff;
-}
-#aBox {
-    padding: 90px 0;
-}
-#aTextBox {
-    width: 50%;
-    padding-left: 100px;
-}
-.aTitle, .aTitle2 {
-    opacity: 0;
-    letter-spacing: 3.2px;
-    color: #222222;
-    font-size: 5.23rem;
-}
-.aTitle2 {
-    margin-top: -25px;
-}
-.aPrice {
-    display: block;
-    color: #424242;
-    font-size: 1.03rem;
-    font-weight: 600;
-    opacity: 0;
-}
-.aText {
-    display: block;
-    padding-top: 6px;
-    color: #929292;
-    font-size: .96rem;
-    opacity: 0;
-}
-.aMediaText {
-    display: none;
-}
-#aImgBox {
-    opacity: 0;
-    width: 50%;
-    overflow: hidden;
-}
-#aImgBox img {
-    width: 100%;
-}
-/* .imgRotate {
-    animation : rotateIn 3s forwards;
-}
-@keyframes rotateIn {
-    from { transform: rotate(-30deg); }
-    to { transform: rotate(0deg); }
-} */
+/* section a */
+#aSec {width: 100%; background: #fff;}
+#aBox {padding: 90px 0;}
+#aTextBox {width: 50%; padding-left: 100px;}
+.aTitle, .aTitle2 {opacity: 0; letter-spacing: 3.2px; color: #222222; font-size: 5.23rem;}
+.aTitle2 {margin-top: -25px;}
+.aPrice {display: block; color: #424242; font-size: 1.03rem; font-weight: 600; opacity: 0;}
+.aText {display: block; padding-top: 6px; color: #929292; font-size: .96rem; opacity: 0;}
+.aMediaText {display: none;}
+#aImgBox {opacity: 0; width: 50%; overflow: hidden;}
+#aImgBox img {width: 100%;}
 
+/* section b */
+#bSec {width: 100%; background: #fff;}
+.bBox {display: flex; width: 100%; position: relative;}
+.bTitle {position: absolute; display: flex; align-items: center; bottom: 102%; left: 15px;}
+.bTitle p {text-align: end; font-size: .9rem; color: #788841; font-weight: 600;}
+.menuBox {width: 29%; height: 250px; background: #445b17; display: flex; position: relative;}
+.bName {position: absolute; top: 100%; margin-top: 50px; width: 280px;}
+.bBox:first-child .bName {left: 85px; margin-top: 40px;}
+.menuBox p, .bBox:last-child .menuBox p {font-size: 1.3rem; color: #788841; text-align: center;}
+.bPrice {font-size: .9rem !important; color: #c5c5c5 !important; font-weight: 600; margin-top: -2px;}
+.bBox:last-child .bName {right: 85px;}
+.bBox:first-child .menuBox:last-child {background: none;}
+.bMenu {width: 50%; height: 100%; background: #445b17; position: relative;}
 
-/* section B */
-#bSec {
-    width: 100%;
-    background: #fff;
-}
-.bBox {
-    /* padding: 90px 0; */
-    display: flex;
-    width: 100%;
-    position: relative;
-}
-.bTitle {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    bottom: 102%;
-    left: 15px;
-}
-.bTitle p {
-    text-align: end;
-    font-size: .9rem;
-    color: #788841;
-    font-weight: 600;
-}
-.menuBox {
-    width: 29%;
-    height: 250px;
-    background: #445b17;
-    display: flex;
-    position: relative;
-}
-.bName {
-    position: absolute;
-    top: 100%;
-    margin-top: 50px;
-    width: 280px;
-}
-.bBox:first-child .bName {
-    left: 85px;
-    margin-top: 40px;
-}
-.menuBox p, .bBox:last-child .menuBox p {
-    font-size: 1.3rem;
-    color: #788841;
-    text-align: center;
-}
-.bPrice {
-    font-size: .9rem !important;
-    color: #c5c5c5 !important;
-    font-weight: 600;
-    margin-top: -2px;
-}
-.bBox:last-child .bName {
-    right: 85px;
-}
-.bBox:first-child .menuBox:last-child {
-    background: none;
-}
-.bMenu {
-    width: 50%;
-    height: 100%;
-    background: #445b17;
-    position: relative;
-}
+.bMenu img {opacity: 0; width: 365px; position: absolute; top: 0; z-index: 1;}
+.bBox:first-child .menuBox img {left: 0;}
+.bBox:last-child {padding-top: 150px; padding-bottom: 80px; justify-content: flex-end;}
+.bBox:last-child .menuBox {display: flex; flex-direction: row-reverse;}
+.bBox:last-child .menuBox:first-child {background: none;}
+.bBox:last-child .menuBox img {right: 0;}
 
-.bMenu img {
-    opacity: 0;
-    width: 365px;
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-.bBox:first-child .menuBox img {
-    left: 0;
-}
-.bBox:last-child {
-    padding-top: 150px;
-    padding-bottom: 80px;
-    justify-content: flex-end;
-}
-.bBox:last-child .menuBox {
-    display: flex;
-    flex-direction: row-reverse;
-}
-.bBox:last-child .menuBox:first-child {
-    background: none;
-}
+.roundRight {border-top-right-radius: 50%; border-bottom-right-radius: 50%;}
+.roundLeft {border-top-left-radius: 50%; border-bottom-left-radius: 50%;}
+.wSize {width: 40%;}
 
-.bBox:last-child .menuBox img {
-    right: 0;
-}
+/* section c */
+#cSec {width: 100%; background: #fff;}
+#cBox {padding: 100px 0;}
+#cTextBox {width: 50%; padding-left: 40px;}
+.cTitle, .cTitle2 {opacity: 0; letter-spacing: 3.2px; color: #222222; font-size: 5.23rem;}
+.cTitle2 {margin-top: -25px;}
+.cPrice {display: block; color: #424242; font-size: 1.03rem; font-weight: 600; opacity: 0;}
+.cText {display: block; padding-top: 6px; color: #929292; font-size: .96rem; opacity: 0;}
+.cMediaText {display: none;}
+#cImgBox {width: 50%; overflow: hidden;}
+#cImgBox img {width: 100%; margin-left: -100%;}
 
-.roundRight {
-    border-top-right-radius: 50%;
-    border-bottom-right-radius: 50%;
-}
-.roundLeft {
-    border-top-left-radius: 50%;
-    border-bottom-left-radius: 50%;
-}
-.wSize {
-    width: 40%;
-}
+/* section d */
+#dSec {width: 100%; background: #fff;}
+#dBox {padding: 120px 0; display: flex; width: 100%; justify-content: space-between; border-top: 1px solid #c5c5c5;}
+.dTitleBox {width: 28%; display: flex; justify-content: center; align-items: center; flex-wrap: wrap;}
+.dTitle h1 {opacity: 0; font-size: 5.23rem; color: #333; text-align: center;}
+.dTitle h1:nth-child(2) {margin-top: -25px;}
+.dLine {display: flex; margin: 12px 0 16px;}
+.slideL {width: 55px; height: 4px; background: #e5e6e0; transition: .3s; margin-right: 2px;}
+.slOn {background: #788841;}
+.dImgBox {width: 72%; overflow: hidden;}
+.dSlide {display: flex; width: 1625px; justify-content: center; align-items: center;}
+.dImgInfo {width: 325px;}
+.bNum {font-size: 2rem; font-weight: 600; color: #445b17;}
+.dImgInfo img {width: 85%; opacity: .4;}
+.dImgOn {opacity: 1 !important;}
+.dTextBox {padding: 8px 20px;}
 
-/* section C */
-#cSec {
-    width: 100%;
-    background: #fff;
-}
-#cBox {
-    padding: 100px 0;
-}
-#cTextBox {
-    width: 50%;
-    padding-left: 40px;
-}
-.cTitle, .cTitle2 {
-    opacity: 0;
-    letter-spacing: 3.2px;
-    color: #222222;
-    font-size: 5.23rem;
-}
-.cTitle2 {
-    margin-top: -25px;
-}
-.cPrice {
-    display: block;
-    color: #424242;
-    font-size: 1.03rem;
-    font-weight: 600;
-    opacity: 0;
-}
-.cText {
-    display: block;
-    padding-top: 6px;
-    color: #929292;
-    font-size: .96rem;
-    opacity: 0;
-}
-.cMediaText {
-    display: none;
-}
-#cImgBox {
-    width: 50%;
-    overflow: hidden;
-}
-#cImgBox img {
-    width: 100%;
-    margin-left: -100%;
-}
+.dTextBox p:first-child {font-size: 1.63rem; font-weight: 600; color: #e5e6e0; letter-spacing: -0.5px;}
+.dPrice {font-size: .96rem; font-weight: 600; color: #e5e6e0; padding: 2px 0;}
+.dTextBox p:last-child {font-size: .8rem; color: #e5e6e0;}
+.fontOn p:first-child{color: #788841;}
+.fontOn .dPrice {color: #636363;}
+.fontOn p:last-child {color: #929292;}
 
+/* section e */
+#eSec {width: 100%;}
+#eBox {display: flex; width: 100%; height: 550px; justify-content: center; align-items: center; position: relative;}
 
-/* section D */
-#dSec {
-    width: 100%;
-    background: #fff;
-}
-#dBox {
-    padding: 120px 0;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    border-top: 1px solid #c5c5c5;
-}
-.dTitleBox {
-    width: 28%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-.dTitle h1 {
-    opacity: 0;
-    font-size: 5.23rem;
-    color: #333;
-    text-align: center;
-}
-.dTitle h1:nth-child(2) {
-    margin-top: -25px;
-}
-.dLine {
-    display: flex;
-    margin: 12px 0 16px;
-}
-.slideL {
-    /* width: 70px;
-    height: 4px;
-    background: #d2dcb0; */
+.eTitle h1 {opacity: 0; font-size: 5.23rem; color: #f8f9f4;}
+.eTitle p {text-align: center; color: rgba(255, 255, 255, .5); font-size: 1.63rem; font-weight: 600; margin-top: -18px;}
+#backVideo {width: 100%; position: fixed; top: 0; left: 0; z-index: -1;}
+#backVideo .movie {width: 100%; display: block;}
 
-    width: 55px;
-    height: 4px;
-    background: #e5e6e0;
-    transition: .3s;
-    margin-right: 2px;
-}
-.slOn {
-    /* background: #fbfdf1; */
-    background: #788841;
-}
-.dImgBox {
-    width: 72%;
-    overflow: hidden;
-}
-.dSlide {
-    display: flex;
-    width: 1625px;
-    justify-content: center;
-    align-items: center;
-}
-.dImgInfo {
-    width: 325px;
-}
-.bNum {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #445b17;
-}
-.dImgInfo img {
-    width: 85%;
-    opacity: .4;
-}
-.dImgOn {
-    opacity: 1 !important;
-}
-.dTextBox {
-    padding: 8px 20px;
-}
+/* section f */
+#fSec {width: 100%; justify-content: center; background: #fff;}
+#fBigBox {position: relative; display: flex; align-items: center; flex-wrap: wrap; max-width: 1280px; margin: 0 auto; padding: 120px 20px;}
+.fBox {width: 100%;}
+.fBox p:first-child {font-size: 2rem; color: #333;}
+.fBox p {font-size: .88rem; color: #616161; opacity: 0;}
+.evtBox {padding-top: 45px; width: 100%; display: flex; align-items: center; padding-left: 6%; opacity: 0;}
+.fTitle {width: 14%; display: flex; justify-content: center; align-items: center;}
+.fNum {font-size: 6rem; font-weight: 600; color: #445b17;}
+.evtBox:nth-child(2n) .fNum {color: #5b1717;}
+.fTitle p:last-child {z-index: 1;}
+.fIcon {font-size: 3rem; color: #788841;}
 
-.dTextBox p:first-child {
-    font-size: 1.63rem;
-    font-weight: 600;
-    color: #e5e6e0;
-    letter-spacing: -0.5px;
-}
-.dPrice {
-    font-size: .96rem;
-    font-weight: 600;
-    color: #e5e6e0;
-    padding: 2px 0;
-}
-.dTextBox p:last-child {
-    font-size: .8rem;
-    color: #e5e6e0;
-}
-.fontOn p:first-child{
-    color: #788841;
-}
-.fontOn .dPrice {
-    color: #636363;
-}
-.fontOn p:last-child {
-    color: #929292;
-}
+.fText {width: 50%; padding-left: 4%;}
+.fText p:first-child {font-size: 1.45rem; font-weight: 600; color: #445b17;}
+.evtBox:nth-child(2n) .fText p:first-child {color: #5b1717;}
+.wineRcolor {color: #5b1717;}
+.wineGcolor {color: #445b17;}
+.fText p:nth-child(2) {font-size: .96rem; font-weight: 600; color: #636363; padding: 2px 0;}
+.fInfo {display: block; font-size: .85rem; color: #929292;}
+.fMinfo {display: none;}
+.fStar {width: 20%;}
 
-/* section E */
-#eSec {
-    width: 100%;
-}
-#eBox {
-    display: flex;
-    width: 100%;
-    height: 550px;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
+.starInfo {display: flex; align-items: center; width: 100%; justify-content: center;}
+.starInfo p {font-size: .9rem; font-weight: 600; width: 15%; text-align: center; color: #333;}
+.starLine {width: 60%; height: 6px; background: #d2dcb0;}
+.evtBox:nth-child(2n) .starLine {background: #dcb0b0;}
+.starColor1, .starColor2, .starColor3, .starColor4 {height: 6px; background: #788841; width: 0;}
+.evtBox:nth-child(2n) .starColor1, .evtBox:nth-child(2n) .starColor2, .evtBox:nth-child(2n) .starColor3, .evtBox:nth-child(2n) .starColor4 {background: #5b1717;}
 
-.eTitle h1 {
-    opacity: 0;
-    font-size: 5.23rem;
-    color: #f8f9f4;
-}
-.eTitle p {
-    text-align: center;
-    color: rgb(255 255 255 / .5);
-    font-size: 1.63rem;
-    font-weight: 600;
-    margin-top: -18px;
-}
-#backVideo {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -1;
-}
-#backVideo .movie {
-    width: 100%;
-    display: block;
-}
+.fOne .cp {animation : width20 3s forwards;}
+.fOne .sp {animation : width40 3s forwards;}
+.fOne .tp {animation : width60 3s forwards;}
+.fOne .bp {animation : width60 3s forwards;}
 
+.fTwo .cp {animation : width60 3s forwards;}
+.fTwo .sp {animation : width80 3s forwards;}
+.fTwo .tp {animation : width20 3s forwards;}
+.fTwo .bp {animation : width40 3s forwards;}
 
-/* section F */
-#fSec {
-    width: 100%;
-    justify-content: center;
-    background: #fff;
-}
-#fBigBox {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 120px 20px;
-}
-.fBox {
-    width: 100%;
-}
-.fBox p:first-child {
-    font-size: 2rem;
-    color: #333;
-}
-.fBox p {
-    font-size: .88rem;
-    color: #616161;
-    opacity: 0;
-}
-.evtBox {
-    padding-top: 45px;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 6%;
-    opacity: 0;
-}
-.fTitle {
-    width: 14%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.fNum {
-    font-size: 6rem;
-    font-weight: 600;
-    color: #445b17;
-}
-.evtBox:nth-child(2n) .fNum {
-    color: #5b1717;
-}
-.fTitle p:last-child {
-    z-index: 1;
-}
-.fIcon {
-    font-size: 3rem;
-    color: #788841;
-}
+.fThr .cp {animation : width80 3s forwards;}
+.fThr .sp {animation : width60 3s forwards;}
+.fThr .tp {animation : width20 3s forwards;}
+.fThr .bp {animation : width20 3s forwards;}
 
-.fText {
-    width: 50%;
-    padding-left: 4%;
-}
-.fText p:first-child {
-    font-size: 1.45rem;
-    font-weight: 600;
-    color: #445b17;
-}
-.evtBox:nth-child(2n) .fText p:first-child {
-    color: #5b1717;
-}
-.wineRcolor {
-    color: #5b1717;
-}
-.wineGcolor {
-    color: #445b17;
-}
-.fText p:nth-child(2) {
-    font-size: .96rem;
-    font-weight: 600;
-    color: #636363;
-    padding: 2px 0;
-}
-.fInfo {
-    display: block;
-    font-size: .85rem;
-    color: #929292;
-}
-.fMinfo {
-    display: none;
-}
-.fStar {
-    width: 20%;
-}
-.starInfo {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-}
-.starInfo p {
-    font-size: .9rem;
-    font-weight: 600;
-    width: 15%;
-    text-align: center;
-    color: #333;
-}
-.starLine {
-    width: 60%;
-    height: 6px;
-    background: #d2dcb0;
-}
-.evtBox:nth-child(2n) .starLine {
-    background: #dcb0b0;
-}
-.starColor1, .starColor2, .starColor3, .starColor4 {
-    height: 6px;
-    background: #788841;
-    width: 0;
-}
-.evtBox:nth-child(2n) .starColor1, .evtBox:nth-child(2n) .starColor2, .evtBox:nth-child(2n) .starColor3, .evtBox:nth-child(2n) .starColor4 {
-    background: #5b1717;
-}
-
-.fOne .cp {
-    animation : width20 3s forwards;
-}
-.fOne .sp {
-    animation : width40 3s forwards;
-}
-.fOne .tp {
-    animation : width60 3s forwards;
-}
-.fOne .bp {
-    animation : width60 3s forwards;
-}
-
-.fTwo .cp {
-    animation : width60 3s forwards;
-}
-.fTwo .sp {
-    animation : width80 3s forwards;
-}
-.fTwo .tp {
-    animation : width20 3s forwards;
-}
-.fTwo .bp {
-    animation : width40 3s forwards;
-}
-
-.fThr .cp {
-    animation : width80 3s forwards;
-}
-.fThr .sp {
-    animation : width60 3s forwards;
-}
-.fThr .tp {
-    animation : width20 3s forwards;
-}
-.fThr .bp {
-    animation : width20 3s forwards;
-}
-
-.fFou .cp {
-    animation : width80 3s forwards;
-}
-.fFou .sp {
-    animation : width60 3s forwards;
-}
-.fFou .tp {
-    animation : width20 3s forwards;
-}
-.fFou .bp {
-    animation : width20 3s forwards;
-}
+.fFou .cp {animation : width80 3s forwards;}
+.fFou .sp {animation : width60 3s forwards;}
+.fFou .tp {animation : width20 3s forwards;}
+.fFou .bp {animation : width20 3s forwards;}
 
 @keyframes width20 {
-    from { width: 0; }
-    to { width: 20%; }
+    from {width: 0;}
+    to {width: 20%;}
 }
 @keyframes width40 {
-    from { width: 0; }
-    to { width: 40%; }
+    from {width: 0;}
+    to {width: 40%;}
 }
 @keyframes width60 {
-    from { width: 0; }
-    to { width: 60%; }
+    from {width: 0;}
+    to {width: 60%;}
 }
 @keyframes width80 {
-    from { width: 0; }
-    to { width: 80%; }
+    from {width: 0;}
+    to {width: 80%;}
 }
 @keyframes width100 {
-    from { width: 0; }
-    to { width: 100%; }
+    from {width: 0;}
+    to {width: 100%;}
 }
 
+/* section g */
+#gSec {width: 100%; justify-content: center; background: #fff;}
+#gBigBox {position: relative; display: flex; align-items: center; flex-wrap: wrap; max-width: 1280px; margin: 0 auto; padding: 90px 20px 100px; border-top: 1px solid #c5c5c5;}
 
-#gSec {
-    width: 100%;
-    justify-content: center;
-    background: #fff;
-}
-#gBigBox {
-    position: relative;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 90px 20px 100px;
-    border-top: 1px solid #c5c5c5;
-}
-.gBox {
-    width: 100%;
-}
-.gBox p:first-child {
-    font-size: 2rem;
-    color: #333;
-}
-.gBox p {
-    opacity: 0;
-    font-size: .88rem;
-    color: #616161;
-}
-.evtGbox {
-    padding-top: 45px;
-    width: 33%;
-    display: flex;
-    align-items: center;
-}
-.gTitle {
-    width: 55%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-}
-.gNum {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 11rem;
-    font-weight: 600;
-    color: #f8f9f4;
-}
-.gImg {
-    width: 100%;
-    z-index: 1;
-    overflow: hidden;
-}
-.gImg img {
-    width: 100%;
-    margin-left: -100%;
-}
-.gIcon {
-    font-size: 3rem;
-    color: #788841;
+.gBox {width: 100%;}
+.gBox p:first-child {font-size: 2rem; color: #333;}
+.gBox p {opacity: 0; font-size: .88rem; color: #616161;}
+.evtGbox {padding-top: 45px; width: 33%; display: flex; align-items: center;}
+.gTitle {width: 55%; display: flex; justify-content: center; align-items: center; position: relative;}
+.gNum {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 11rem; font-weight: 600; color: #f8f9f4;}
+
+.gImg {width: 100%; z-index: 1; overflow: hidden;}
+.gImg img {width: 100%; margin-left: -100%;}
+.gIcon {font-size: 3rem; color: #788841;}
+
+.gText {width: 45%; display: flex; flex-wrap: wrap; align-items: center; opacity: 0;}
+.gText p:first-child {font-size: 1.45rem; padding-bottom: 6px; font-weight: 600; color: #445b17;}
+.gInfo {font-size: .85rem; color: #929292;}
+
+/*
+##Device = Most of the Smartphones Mobiles (Portrait)
+##Screen = B/w 320px to 479px
+##Device = 대부분의 스마트폰 모바일 기기(세로)
+##Screen = 320px에서 479px 사이
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .logo p {color: #fff; font-size: 1.6rem;}
+    .naviBox {display: none;}
+    #infoBox {display: none;}
+    #infoBoxLeft {width: 100%; top: 0; border-radius: unset;}
+    .leftTitle h1 {font-size: 5rem;}
+
+    #aBox {flex-direction: column-reverse; padding: 0 0 100px;}
+    #aImgBox {width: 100%;}
+    #aTextBox {width: 100%; padding: 0 20px;}
+    .aTitle, .aTitle2 {font-size: 2.8rem; margin-top: -12px;}
+    .aText {display: none;}
+    .aMediaText {display: block; padding-top: 4px; color: #929292; font-size: .8rem; opacity: 0;}
+
+    .bBox {flex-wrap: wrap;}
+    .bTitle {bottom: 100.5%;}
+    .menuBox {width: 100%; margin-bottom: 120px;}
+    .bBox:last-child {padding-top: 0;}
+    .bMenu img {width: 355px;}
+
+    #cBox {padding: 80px 0 100px; border-top: 1px solid #c5c5c5;}
+    #cImgBox {width: 100%;}
+    #cTextBox {width: 100%; padding: 0 20px;}
+    .cTitle, .cTitle2 {font-size: 2.8rem; margin-top: -12px;}
+    .cText {display: none;}
+    .cMediaText {display: block; padding-top: 4px; color: #929292; font-size: .8rem; opacity: 0;}
+
+    #dBox {flex-wrap: wrap; padding: 100px 0;}
+    .dTitleBox {width: 100%;}
+    .dTitle h1 {font-size: 4rem;}
+    .dLine {display: none;}
+ 
+    .dImgBox {width: 100%; overflow: unset;}
+    .dSlide {flex-wrap: wrap; width: 88%; margin: 0 auto !important;}
+    .dImgInfo {width: 100%; padding: 25px 0;}
+    .dImgInfo img {width: 80%; margin: 0 auto; opacity: 1;}
+
+    #eBox {height: 450px;}
+    .eTitle h1 {font-size: 3.4rem;}
+    #backVideo .movie {height: 100vh; width: initial;}
+
+    #fBigBox {padding: 100px 25px;}
+    .fBox p:first-child {font-size: 1.7rem;}
+    .fBox p {font-size: .75rem;}
+    .evtBox {padding: 35px 0 0; flex-wrap: wrap;}
+
+    .fTitle {width: 40%;}
+    .fStar {width: 60%;}
+    .fText {padding: 0; width: 100%;}
+    .fInfo {display: none;}
+    .fMinfo {display: block; font-size: .8rem; color: #929292;}
+
+    .evtGbox {padding-top: 35px; width: 100%;}
+    .gTitle, .gText {width: 50%;}
+    .gNum {font-size: 8rem;}
 }
 
-.gText {
-    width: 45%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    opacity: 0;
-}
-.gText p:first-child {
-    font-size: 1.45rem;
-    padding-bottom: 6px;
-    font-weight: 600;
-    color: #445b17;
-}
-.gInfo {
-    font-size: .85rem;
-    color: #929292;
-}
