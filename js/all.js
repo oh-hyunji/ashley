@@ -111,6 +111,4 @@ $(document).ready(function(){
         $('html,body').css('overflow-y', 'auto');
         $('.lText').val('');
     });
-
-
 });
